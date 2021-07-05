@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    </link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </link>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+
+<body>
+  <header class="home-header">
+    <div class="home-header-ofertas">
+        <a href="/registro"><strong>¡Registrate gratis para mas descuentos!</strong></a>
+        <div class="home-header-button-top">
+            <a href="#" class="home-button-a">
+            <i id="home-search" class="fas fa-search"></i>
+        </a>
+        <a href="/carrito"class="home-button-a" >
+            <i id="home-shopping" class="fas fa-shopping-bag"></i>
+        </a>
+        </div>
+    </div>
+    <div class="home-header-div1">
+        <a href="#" class="home-header-buttom">
+            <i id="home-hamburguer" class="fas fa-bars"></i>
+        </a>
+        <a href="/"> <img id="home-header-logo" src="/img/Logo/logo_transparent_mo.png">
+        </a>
+        <nav class="home-header-navbar">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="#">TIENDA</a></li>
+                <li><a href="#">¿COMO COMPRAR?</a></li>
+                <li><a href="#">REGALA</a></li>
+                <li><a href="#">TIPS</a></li>
+                <li><a href="#">FAQS</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+        </nav>
+        <div class="home-header-button">
+            <a href="#" class="home-button-a">
+            <i id="home-search" class="fas fa-search"></i>
+        </a>
+        <a href="/carrito" class="home-button-a" >
+            <i id="home-shopping" class="fas fa-shopping-bag"></i>
+        </a>
+        </div>
+    </div>
+
+    
+    </header>
+
+    <main>
+
+        <section class="add-product">
+            
+            <form action="/products/addProduct" method="POST"  enctype="multipart/form-data">
+                <div>
+                    <label for="nombre-de-producto">Nombre de Producto:</label>
+                    <br>
+                    <input type="text" name="nombre" class="desc-nuevo-product" placeholder="Producto NUEVO">
+                </div>
+            <br>
+            <div>
+                <label for="descripcion-nuevo-producto">Descripcion: </label>
+                <br>
+                <input type="text" name="descripcion" class="desc-nuevo-product" placeholder="Aqui su Descripcion">
+            </div>
+            <br>
+            <label for="interior-exterior">Característica: </label>
+            <br>
+            <select name="Categoría" class="interior-exterior">
+                <option value="Exterior" selected>Exterior</option>
+                <option value="Interior">Interior</option>
+            </select>
+            <br>
+            <br>
+            <div>
+                <label for="precio-de-producto">Precio de Producto: </label>
+                <br>
+                <input type="number" name="precio" class="precio-nuevo" placeholder="$$$$">
+            </div>
+            <br>
+            <div>
+                    <label for="imagenProducto" class="form-label">Imagen</label>
+                    <br>
+                    <input type="file" name="imagenProducto">
+            </div>
+            <br>
+            
+            <br>
+            <button type="submit" value="Login" class="login-button">Subir Producto</button>
+              
+            </form>
+
+        </section>
+
+    </main>
+
+
+</body>
+
+

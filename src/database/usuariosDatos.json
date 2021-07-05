@@ -1,0 +1,41 @@
+{ "usuarios": [
+    {
+        "id": 1,
+        "nombre": "Roberto",
+        "apellido": "Carlos",
+        "email": "Interior",
+        "password": "Carlos123",
+        "telefono": 541163214010,
+        "imagen-perfil":"imagen.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Mariana",
+        "apellido": "Rivero",
+        "email": "Interior",
+        "password": "Rivero123",
+        "telefono": 541163214011,
+        "imagen-perfil":"imagen.jpg"
+    },{
+        "id": 3,
+        "nombre": "Alicia",
+        "apellido": "Altieri",
+        "email": "Interior",
+        "password": "Altieri123",
+        "telefono": 541163214012,
+        "imagen-perfil":"imagen.jpg"
+    },{
+        "id": 4,
+        "nombre": "Juan",
+        "apellido": "Portela",
+        "email": "Interior",
+        "password":"Portela123",
+        "telefono": 541163214013,
+        "imagen-perfil":"imagen.jpg"
+    }
+    
+
+]
+   
+}
+   

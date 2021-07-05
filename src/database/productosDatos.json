@@ -1,0 +1,106 @@
+[
+ {
+  "id": 1,
+  "nombre": "Allocasia Cullata",
+  "descripcion": "Planta de interior, Riego Bajo",
+  "categoría": "Interior",
+  "precio": 750,
+  "imagen": "Alocasia Cullata.jpg"
+ },
+ {
+  "id": 2,
+  "nombre": "Tradescantia Spathacea",
+  "descripcion": "Planta de interior, Riego Bajo",
+  "categoría": "Interior",
+  "precio": 1150,
+  "imagen": "Tradescantia-spathacea.jpg"
+ },
+ {
+  "id": 3,
+  "nombre": "Palo de Agua",
+  "descripcion": "Planta de interior, Riego Bajo",
+  "categoría": "Interior",
+  "precio": 1050,
+  "imagen": "Palo de Agua.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "Ficus Elástica",
+  "descripcion": "Planta de interior, Riego Bajo",
+  "categoría": "Interior",
+  "precio": 1350,
+  "imagen": "Ficus Elástica.jpeg"
+ },
+ {
+  "id": 4,
+  "nombre": "Dracena Marginata",
+  "descripcion": "Planta de interior, Riego Bajo",
+  "categoría": "Interior",
+  "precio": 1150,
+  "imagen": "Dracena Marginata.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "Dracena Kiwi",
+  "descripcion": "Planta de interior, Riego Bajo",
+  "categoría": "Interior",
+  "precio": 1650,
+  "imagen": "Dracena Kiwi.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "Ficus Hawai",
+  "descripcion": "Planta de interior, Riego Bajo",
+  "categoría": "Interior",
+  "precio": 1150,
+  "imagen": "Ficus Hawai.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "Ficus Hawai",
+  "descripcion": "Planta de interior, Riego Bajo",
+  "categoría": "Interior",
+  "precio": 1150,
+  "imagen": "Ficus Hawai.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "Ficus Hawai",
+  "descripcion": "Planta de interior, Riego Bajo",
+  "categoría": "Interior",
+  "precio": 1150,
+  "imagen": "Ficus Hawai.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "Roberto Carlos",
+  "descripcion": "Planta de interior, Riego Bajo",
+  "categoría": "Interior",
+  "precio": 1150,
+  "imagen": "Ficus Hawai.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "Thom Yorke",
+  "precio": "300.000",
+  "descripcion": "De las cositas que mejor pude hacer en este mundo.",
+  "select": "value1",
+  "imagen": "img-thom-yorke.jpg"
+ },
+ {
+  "id": 6,
+  "nombre": "Thom Yorke",
+  "descripcion": "Cantante de la Banda RadioHead",
+  "Categoría": "Exterior",
+  "precio": "300.000",
+  "imagen": "img-thom-yorke.jpg"
+ },
+ {
+  "id": 7,
+  "nombre": "Juan Martin",
+  "descripcion": "eeee",
+  "Categoría": "Exterior",
+  "precio": "22222",
+  "imagen": "img-45257501442_fe41693fd4_o.jpg"
+ }
+]
