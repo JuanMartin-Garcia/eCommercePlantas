@@ -1,62 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    </link>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    </link>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Home</title>
-</head>
-
-<body>
-  <header class="home-header">
-    <div class="home-header-ofertas">
-        <a href="../users/registro"><strong>¡Registrate gratis para mas descuentos!</strong></a>
-        <div class="home-header-button-top">
-            <a href="#" class="home-button-a">
-            <i id="home-search" class="fas fa-search"></i>
-        </a>
-        <a href="../products/carrito"class="home-button-a" >
-            <i id="home-shopping" class="fas fa-shopping-bag"></i>
-        </a>
-        </div>
-    </div>
-    <div class="home-header-div1">
-        <a href="#" class="home-header-buttom">
-            <i id="home-hamburguer" class="fas fa-bars"></i>
-        </a>
-        <a href="/"> <img id="home-header-logo" src="/img/Logo/logo_transparent_mo.png">
-        </a>
-        <nav class="home-header-navbar">
-            <ul>
-                <li><a href="/">HOME</a></li>
-                <li><a href="#">TIENDA</a></li>
-                <li><a href="#">¿COMO COMPRAR?</a></li>
-                <li><a href="#">REGALA</a></li>
-                <li><a href="#">TIPS</a></li>
-                <li><a href="#">FAQS</a></li>
-                <li><a href="#">CONTACTO</a></li>
-            </ul>
-        </nav>
-        <div class="home-header-button">
-            <a href="#" class="home-button-a">
-            <i id="home-search" class="fas fa-search"></i>
-        </a>
-        <a href="../products/carrito" class="home-button-a" >
-            <i id="home-shopping" class="fas fa-shopping-bag"></i>
-        </a>
-        </div>
-    </div>
-
-    
-</header>
+  <%- include('../partials/head', {title: 'Home'}) %>
+  <%- include('../partials/header') %>
     <main>
+      
       <div class="banner"><img src="/img/Plantasia.png"></div>
       <!--Section Products-->
         <!--Menu-Sidebar-->
@@ -185,64 +132,7 @@
             
       <!--Section Products-->
     </main>
-
-      <!-- Footer -->
-  <footer id="footer" class="section footer">
-    <div class="container">
-      <div class="footer-container">
-        <div class="footer-center">
-          <h3>REDES SOCIALES</h3>
-          <a href="#">Instagram</a>
-          <a href="#">Twitter</a>
-          <a href="#">Facebook</a>
-          <a href="#">Whatsaap</a>
-          
-        </div>
-        <div class="footer-center">
-          <h3>INFORMACIÓN</h3>
-          <a href="#">Sobre Nosotros</a>
-          <a href="#">Políticas Privacidad</a>
-          <a href="#">Terminos y Condiciones</a>
-          <a href="#">Contáctanos</a>
-          <a href="#">Mapa del Sitio</a>
-        </div>
-        <div class="footer-center">
-          <h3>MI CUENTA</h3>
-          <a href="#">Mi Cuenta</a>
-          <a href="#">Ordenes de Compra</a>
-          <a href="#">Deseados</a>
-          <a href="#">Newsletter</a>
-          <a href="#">Devoluciones</a>
-        </div>
-        <div class="footer-center">
-          <h3>CONTACT US</h3>
-          <div>
-            <span>
-              <i class="fas fa-map-marker-alt"></i>
-            </span>
-            Costa Rica 2009, Palermo, CABA, Argentina
-          </div>
-          <div>
-            <span>
-              <i class="far fa-envelope"></i>
-            </span>
-            plantasia@gmail.com
-          </div>
-          <div>
-            <span>
-              <i class="fas fa-phone"></i>
-            </span>
-            +54-11-64356740
-          </div>
-          <div class="payment-methods">
-            <img src="./images/payment.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  </footer>
-  <!-- End Footer -->
+    <%- include('../partials/footer') %>
 </body>
 
 </html>

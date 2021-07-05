@@ -11,6 +11,9 @@ const partialsController = {
         header: function (req, res){
             res.render("./partials/header")
         },
+        head: function (req, res){
+            res.render("./partials/head")
+        },
 
 }
 
