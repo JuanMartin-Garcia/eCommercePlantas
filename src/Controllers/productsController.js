@@ -56,7 +56,7 @@ const productsController = {
 				var productoEncontrado = products[i];
 			}
 		}     
-        res.render('editProduct',{productoEnDetalle: productoEncontrado});
+        res.render('./products/editProduct',{productoEnDetalle: productoEncontrado});
         
     },
 
@@ -70,11 +70,11 @@ const productsController = {
 		for(let i=0;i<products.length;i++){
 			if (products[i].id==idProducto){
 
-				products[i].name = valoresNuevos.name;
-				products[i].price = valoresNuevos.price;
-				products[i].discount = valoresNuevos.discount;
-				products[i].category = valoresNuevos.category;
-				products[i].description = valoresNuevos.description;
+				products[i].nombre = valoresNuevos.nombre;
+				products[i].precio = valoresNuevos.precio;
+				products[i].descuento = valoresNuevos.descuento;
+				products[i].categoría = valoresNuevos.categoría;
+				products[i].descripcion = valoresNuevos.descripcion;
 
 				var productoEncontrado = products[i];
 
@@ -84,7 +84,7 @@ const productsController = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products,null, ' '));
 
-		res.render('detalle',{productoEnDetalle: productoEncontrado})
+		res.render('./products/detalle-producto',{productoEnDetalle: productoEncontrado})
 		
 	},
     /* ELIMINAR PRODUCTO */

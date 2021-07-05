@@ -56,21 +56,22 @@
         
     </header>
     <section class="add-product">
-        <div>
-            <label for="id-de-producto">Id de Producto que desea editar:</label>
-            <input type="number" name="id-de-producto" class="img-nueva" placeholder="ID Producto">
-        </div>
+       
 
-        <form action="/editar-producto?_method=PUT" method="POST">
+        <form action="/products/editProduct/<%=productoEnDetalle.id%?_method=PUT" method="POST">
+            <div>
+                <label for="id-de-producto">Id de Producto que desea editar:</label>
+                <input type="number" name="id-de-producto" class="img-nueva" placeholder="ID Producto">
+            </div>
             <div>
                 <label for="nombre-de-producto">Nombre:</label>
                 <input type="text" name="nombre-de-producto" class="img-nueva" placeholder="Producto">
             </div>
-        <form action="/imagen-producto" method="POST">
+      
             <label for="imagen-producto">Agregue imagenes:</label>
             <br>
             <input type="file" name="imagen-nuevo-producto">
-        </form>   
+         
         <br>
                                
         <div>

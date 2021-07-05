@@ -102,5 +102,13 @@
   "Categoría": "Exterior",
   "precio": "22222",
   "imagen": "img-45257501442_fe41693fd4_o.jpg"
+ },
+ {
+  "id": 8,
+  "nombre": "Franco cagaste el codig",
+  "descripcion": "Sos un alto cono",
+  "Categoría": "Interior",
+  "precio": "1000",
+  "imagen": "img-thom-yorke.jpg"
  }
 ]
