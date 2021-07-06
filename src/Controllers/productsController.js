@@ -13,6 +13,10 @@ const productsController = {
         res.render('./partials/index', { productos: products })
     },
 
+    listaProductos: (req,res)=>{
+        res.render('./products/list', { productos: products })
+    },
+
     carrito: function(req, res) {
         res.render("./products/carrito")
     },

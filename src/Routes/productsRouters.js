@@ -33,8 +33,9 @@ router.get("/detalle-producto/:id", productsController.detalle);
 router.get("/editProduct/:id", productsController.editarProducto);
 router.put("/editProduct/:id", productsController.actualizar);
 
+router.get("/list", productsController.listaProductos);
 
 /*** ELIMINAR UN PRODUCTO***/
-router.delete('/:id/delete', productsController.eliminar);
+router.delete('/delete/:id', productsController.eliminar);
 
 module.exports = router;
