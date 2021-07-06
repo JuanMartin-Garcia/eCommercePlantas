@@ -82,7 +82,7 @@
  {
   "id": 5,
   "nombre": "Thom Yorke",
-  "precio": 300.000,
+  "precio": 300,
   "descripcion": "De las cositas que mejor pude hacer en este mundo.",
   "select": "value1",
   "imagen": "img-thom-yorke.jpg"
@@ -92,7 +92,7 @@
   "nombre": "Thom Yorke",
   "descripcion": "Cantante de la Banda RadioHead",
   "categoría": "Exterior",
-  "precio": 300.000,
+  "precio": 300,
   "imagen": "img-thom-yorke.jpg"
  },
  {
@@ -110,5 +110,13 @@
   "categoría": "Interior",
   "precio": 1000,
   "imagen": "img-thom-yorke.jpg"
+ },
+ {
+  "id": 9,
+  "nombre": "zarasa",
+  "descripcion": "Es muy buena",
+  "Categoría": "Exterior",
+  "precio": "1000",
+  "imagen": "img-WhatsApp Image 2021-04-05 at 18.35.32-1.jpeg"
  }
 ]

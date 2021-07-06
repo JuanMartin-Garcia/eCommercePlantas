@@ -57,7 +57,7 @@ const productsController = {
 			}
 		}     
         res.render('./products/editProduct',{productoEnDetalle: productoEncontrado});
-        
+        //const productoEnDetalle = products.find(element => element.id == req.params.id); // mejora
     },
 
     /* METODO ACTUALIZACION DE PRODUCTO */

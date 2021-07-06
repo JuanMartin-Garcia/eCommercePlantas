@@ -30,5 +30,5 @@ app.listen(3002, () => {
 
 
 
-
+module.exports = app;
 
