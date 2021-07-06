@@ -8,47 +8,34 @@
     <section class="add-product">
        
 
-        <form action="/products/editProduct/<%=productoEnDetalle.id%?_method=PUT" method="POST">
+        <form action="/products/editProduct/<%=productoEnDetalle.id%>?_method=PUT" method="POST">
+          
             <div>
-                <label for="id-de-producto">Id de Producto que desea editar:</label>
-                <input type="number" name="id-de-producto" class="img-nueva" placeholder="ID Producto">
-            </div>
-            <div>
-                <label for="nombre-de-producto">Nombre:</label>
-                <input type="text" name="nombre-de-producto" class="img-nueva" placeholder="Producto">
+                <label for="nombre">Nombre: <%=productoEnDetalle.nombre %> </label>
+                <input type="text" id="nombre" name="nombre" class="img-nueva" placeholder="Nuevo nombre">
             </div>
       
             <label for="imagen-producto">Agregue imagenes:</label>
             <br>
             <input type="file" name="imagen-nuevo-producto">
-         
+        <br>    
         <br>
                                
         <div>
-            <label for="precio-de-producto">Nuevo precio: </label>
+            <label for="precio">Precio Actual: $<%=productoEnDetalle.precio %> </label>
             <br>
-            <input type="number" name="precio-de-producto" class="precio-nuevo" placeholder="$$$$">
+            <input type="number"  id="precio" name="precio" class="precio-nuevo" placeholder="$$$$">
         </div>
+        
         <div>
-            <label for="oferta-de-producto">Nueva oferta: </label>
+            <label for="descripcion">Descripcion:<%=productoEnDetalle.descripcion %> </label>
             <br>
-            <input type="number" name="oferta-de-producto" class="precio-nuevo" placeholder="%">
-        </div>
-        <div>
-            <label for="stock-disponible">Stock: </label>
-            <br>
-            <input type="number" name="stock-de-producto" class="precio-nuevo">
+            <input type="text" name="descripcion" id="descripcion" class="desc-nuevo-product" placeholder="Aqui su nueva descripcion">
         </div>
 
-        <div>
-            <label for="descripcion-producto">Descripcion: </label>
-            <br>
-            <input type="text" name="descripcion-producto" class="desc-nuevo-product" placeholder="Aqui su Descripcion">
-        </div>
-
-        <label for="interior-exterior">Característica: </label>
+        <label for="categoría">Característica:<%=productoEnDetalle.categoría %> </label>
         <br>
-            <select name="select" class="interior-exterior">
+            <select  type="text" name="categoría" id="categoría"  class="interior-exterior">
                 <option value="value1" selected>Exterior</option>
                 <option value="value2">Interior</option>
             </select>

@@ -82,7 +82,7 @@
  {
   "id": 5,
   "nombre": "Thom Yorke",
-  "precio": "300.000",
+  "precio": 300.000,
   "descripcion": "De las cositas que mejor pude hacer en este mundo.",
   "select": "value1",
   "imagen": "img-thom-yorke.jpg"
@@ -91,24 +91,24 @@
   "id": 6,
   "nombre": "Thom Yorke",
   "descripcion": "Cantante de la Banda RadioHead",
-  "Categoría": "Exterior",
-  "precio": "300.000",
+  "categoría": "Exterior",
+  "precio": 300.000,
   "imagen": "img-thom-yorke.jpg"
  },
  {
   "id": 7,
   "nombre": "Juan Martin",
   "descripcion": "eeee",
-  "Categoría": "Exterior",
-  "precio": "22222",
+  "categoría": "Exterior",
+  "precio": 22222,
   "imagen": "img-45257501442_fe41693fd4_o.jpg"
  },
  {
   "id": 8,
   "nombre": "Franco cagaste el codig",
   "descripcion": "Sos un alto cono",
-  "Categoría": "Interior",
-  "precio": "1000",
+  "categoría": "Interior",
+  "precio": 1000,
   "imagen": "img-thom-yorke.jpg"
  }
 ]

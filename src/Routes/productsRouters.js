@@ -27,7 +27,7 @@ router.post("/addProduct", uploadFile.single('imagenProducto'), productsControll
 router.get("/carrito", productsController.carrito);
 
 /* VER PRODUCTO */
-router.get("/detalle/:id", productsController.detalle);
+router.get("/detalle-producto/:id", productsController.detalle);
 
 /* EDITAR PRODUCTO */
 router.get("/editProduct/:id", productsController.editarProducto);

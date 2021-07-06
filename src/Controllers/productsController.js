@@ -72,7 +72,6 @@ const productsController = {
 
 				products[i].nombre = valoresNuevos.nombre;
 				products[i].precio = valoresNuevos.precio;
-				products[i].descuento = valoresNuevos.descuento;
 				products[i].categoría = valoresNuevos.categoría;
 				products[i].descripcion = valoresNuevos.descripcion;
 
