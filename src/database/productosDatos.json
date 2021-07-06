@@ -1,10 +1,10 @@
 [
  {
   "id": 1,
-  "nombre": "Allocasia Cullata",
-  "descripcion": "Planta de interior, Riego Bajo",
-  "categoría": "Interior",
-  "precio": 750,
+  "nombre": "121212121",
+  "descripcion": "121212121",
+  "categoría": "value2",
+  "precio": "12121",
   "imagen": "Alocasia Cullata.jpg"
  },
  {
@@ -113,10 +113,11 @@
  },
  {
   "id": 9,
-  "nombre": "zarasa",
-  "descripcion": "Es muy buena",
   "Categoría": "Exterior",
-  "precio": "1000",
-  "imagen": "img-WhatsApp Image 2021-04-05 at 18.35.32-1.jpeg"
+  "nombre": "Aeeeeeee",
+  "precio": "1002",
+  "categoría": "value1",
+  "descripcion": "eeeee",
+  "imagen": "Bondio.feteada.Cagnoli.jpg"
  }
 ]

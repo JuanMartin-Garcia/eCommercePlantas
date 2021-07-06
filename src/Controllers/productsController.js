@@ -74,6 +74,7 @@ const productsController = {
                 products[i].precio = valoresNuevos.precio;
                 products[i].categoría = valoresNuevos.categoría;
                 products[i].descripcion = valoresNuevos.descripcion;
+                products[i].imagen = valoresNuevos.imagen;
 
                 var productoEncontrado = products[i];
 
