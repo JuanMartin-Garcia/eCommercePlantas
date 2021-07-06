@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {title: 'Lista de productos' }) %>
+
+  <body>
+    <%- include('../partials/header') %>
+      <main>
+        <div class="carrito-main">
+          <table>
+            <tr>
+              <th>PRODUCTOS</th>
+            </tr>
+            <% for(let i=0;i<productos.length;i++) { %>
+            <tr>
+              <td>
+                <div class="cart-info">
+                  <a href="../products/detalle-producto/<%=productos[i].id %>"><img src="/img/<%=productos[i].imagen %>" class="img">
+
+                  <div>
+                    <a href="../products/detalle-producto/<%=productos[i].id %>">
+                    <p><%=productos[i].nombre %></p></a>
+                    <small>$<%=productos[i].precio %></small>
+                    <br>
+                    <a href="../products/editProduct/<%=productos[i].id %>">Editar</a>
+                    <br>
+                    <form method="POST" action="../products/delete/<%=productos[i].id %>?_method=DELETE" onsubmit="return confirm('Esta seguro que desea eliminarlo?');"> <button>Eliminar</button></form>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <% } %>
+          </table>
+
+
+
+
+        </div>
+        
+
+          
+
+            <!--Section Products-->
+      </main>
+      <%- include('../partials/footer') %>
+        </main>
+  </body>
+
+</html>
