@@ -1,61 +1,5 @@
 [
  {
-  "id": 1,
-  "nombre": "121212121",
-  "descripcion": "121212121",
-  "categoría": "value2",
-  "precio": "12121",
-  "imagen": "Alocasia Cullata.jpg"
- },
- {
-  "id": 2,
-  "nombre": "Tradescantia Spathacea",
-  "descripcion": "Planta de interior, Riego Bajo",
-  "categoría": "Interior",
-  "precio": 1150,
-  "imagen": "Tradescantia-spathacea.jpg"
- },
- {
-  "id": 3,
-  "nombre": "Palo de Agua",
-  "descripcion": "Planta de interior, Riego Bajo",
-  "categoría": "Interior",
-  "precio": 1050,
-  "imagen": "Palo de Agua.jpg"
- },
- {
-  "id": 4,
-  "nombre": "Ficus Elástica",
-  "descripcion": "Planta de interior, Riego Bajo",
-  "categoría": "Interior",
-  "precio": 1350,
-  "imagen": "Ficus Elástica.jpeg"
- },
- {
-  "id": 4,
-  "nombre": "Dracena Marginata",
-  "descripcion": "Planta de interior, Riego Bajo",
-  "categoría": "Interior",
-  "precio": 1150,
-  "imagen": "Dracena Marginata.jpg"
- },
- {
-  "id": 4,
-  "nombre": "Dracena Kiwi",
-  "descripcion": "Planta de interior, Riego Bajo",
-  "categoría": "Interior",
-  "precio": 1650,
-  "imagen": "Dracena Kiwi.jpg"
- },
- {
-  "id": 4,
-  "nombre": "Ficus Hawai",
-  "descripcion": "Planta de interior, Riego Bajo",
-  "categoría": "Interior",
-  "precio": 1150,
-  "imagen": "Ficus Hawai.jpg"
- },
- {
   "id": 4,
   "nombre": "Ficus Hawai",
   "descripcion": "Planta de interior, Riego Bajo",
@@ -97,11 +41,11 @@
  },
  {
   "id": 7,
-  "nombre": "Juan Martin",
-  "descripcion": "eeee",
+  "nombre": "",
+  "descripcion": "cx",
   "categoría": "Exterior",
-  "precio": 22222,
-  "imagen": "img-45257501442_fe41693fd4_o.jpg"
+  "precio": "",
+  "imagen": ""
  },
  {
   "id": 8,

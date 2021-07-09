@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head', {title: 'Detalle'}) %>
-<body>
+<%- include('../partials/head', {title: 'Detalle' }) %>
+
+    <body>
         <%- include('../partials/header') %>
-    <main>
-        <section class="detalle-producto">
-            <div class="img-producto">
-                <img class="foto-producto" src="/img/<%=productoEnDetalle.imagen %>">
-            </div>
-            <div class="desc-producto">
-                <h4 class="titulo-descripcion"><%=productoEnDetalle.descripcion %></h4>
-                <br>
-                <p>
-                </p>
-                    <div class="caja-compra">
-                        <h4>$ <%=productoEnDetalle.precio %> </h4>
-                        <br><input class="boton-agregar-carrito" type="submit" value="Agregar al carrito">
-                        
-                        <a href="/products/editProduct/<%=productoEnDetalle.id %>" class="boton-agregar-carrito" type="submit">Editar Producto</a>
-                        
-                        
-                        
-                        <h4>Cantidad</h4>
+            <main>
+                <div class="container">
+                    <div class="card">
+                        <div class="container-fliud">
+                            <div class="wrapper row">
+                                <div class="preview col-md-6">
+
+                                    <div class="preview-pic tab-content">
+                                        <div class="tab-pane active" id="pic-1"><img
+                                                src="/img/<%=productoEnDetalle.imagen %>" /></div>
+                                    </div>
+                                </div>
+                                <div class="details-col-md-6">
+                                    <h3 class="product-title">
+                                        <%=productoEnDetalle.nombre %>
+                                    </h3>
+                                    <p class="product-description">
+                                        <%=productoEnDetalle.descripcion %>
+                                    </p>
+                                    <h4 class="price">Precio: <span>$<%=productoEnDetalle.precio %></span></h4>
+
+                                    <div class="action">
+                                        <button class="add-to-cart btn btn-default" type="button">add to cart</button>
+                                        
+
+                                        <a href="/products/editProduct/<%=productoEnDetalle.id %>"
+                                             type="submit"><button class="add-to-cart btn btn-default" type="button">Editar producto</button></a>
+                                             <button class="like btn btn-default" type="button"><span
+                                                class="fa fa-heart"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
                 <div class="caracterista-indoor-exterior">
-                    <h4>Caracteristicas indoor/exterior: <%=productoEnDetalle.categoria %> </h4>
+                    <h4>Caracteristicas indoor/exterior: <%=productoEnDetalle.categoria %>
+                    </h4>
                 </div>
-    </main>
-    <%- include('../partials/footer') %>
-</body>
+            </main>
+            <%- include('../partials/footer') %>
+
+    </body>
+
 </html>

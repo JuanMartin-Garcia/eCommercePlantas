@@ -97,16 +97,16 @@ const productsController = {
         let idProducto = req.params.id;
         for (let i = 0; i < products.length; i++) {
             if (products[i].id == idProducto) {
-                var nombreImagen = products[i].image;
+                var nombreImagen = products[i].imagen;
                 products.splice(i, 1);
                 break;
             }
         }
 
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-        fs.unlinkSync(path.join(__dirname, '../../public/img' + nombreImagen));
+        fs.unlinkSync(path.join(__dirname, "../../public/img/"+ nombreImagen));
 
-        res.render('index', { productos: products });
+        res.render('./partials/index', { productos: products });
     }
 
 };

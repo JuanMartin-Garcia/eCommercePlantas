@@ -23,7 +23,7 @@
                     <br>
                     <a href="../products/editProduct/<%=productos[i].id %>">Editar</a>
                     <br>
-                    <form method="POST" action="../products/delete/<%=productos[i].id %>?_method=DELETE" onsubmit="return confirm('Esta seguro que desea eliminarlo?');"> <button>Eliminar</button></form>
+                    <form  action="../products/delete/<%=productos[i].id %>?_method=DELETE" method="POST" onsubmit="return confirm('Esta seguro que desea eliminarlo?');"> <button>Eliminar</button></form>
                   </div>
                 </div>
               </td>
