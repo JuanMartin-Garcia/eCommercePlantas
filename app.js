@@ -17,11 +17,11 @@ app.use(express.static(publicPath));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
+app.use(methodOverride('_method'));
 app.use("/", partialsRouters);
 app.use("/products", productsRouters);
 app.use("/users", usersRouters);
-app.use(methodOverride('_method'));
+
 
 //app.use("/users", usersController);
 

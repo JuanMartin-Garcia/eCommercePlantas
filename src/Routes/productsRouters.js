@@ -21,7 +21,7 @@ router.get("/", productsController.index)
 
 /*** AÑADIR PRODUCTO ***/
 router.get("/addProduct", productsController.añadirProducto);
-router.post("/addProduct", uploadFile.single('imagenProducto'), productsController.guardar);
+router.post("/addProduct", uploadFile.single('imagen'), productsController.guardar);
 
 /* VER CARRITO */
 router.get("/carrito", productsController.carrito);
@@ -31,11 +31,11 @@ router.get("/detalle-producto/:id", productsController.detalle);
 
 /* EDITAR PRODUCTO */
 router.get("/editProduct/:id", productsController.editarProducto);
-router.post("/editProduct/:id", productsController.actualizar);
+router.put("/editProduct/:id",uploadFile.single('imagen'), productsController.actualizar);
 
 router.get("/list", productsController.listaProductos);
 
 /*** ELIMINAR UN PRODUCTO***/
-router.post('/delete/:id', productsController.eliminar);
+router.delete('/delete/:id', productsController.eliminar);
 
 module.exports = router;

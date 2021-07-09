@@ -5,7 +5,7 @@
   "descripcion": "Planta de interior, Riego Bajo",
   "categoría": "Interior",
   "precio": 1150,
-  "imagen": "Ficus Hawai.jpg"
+  "imagen": "tulipan.jpg"
  },
  {
   "id": 4,
@@ -13,7 +13,7 @@
   "descripcion": "Planta de interior, Riego Bajo",
   "categoría": "Interior",
   "precio": 1150,
-  "imagen": "Ficus Hawai.jpg"
+  "imagen": "plantita.jpg"
  },
  {
   "id": 4,
@@ -24,44 +24,34 @@
   "imagen": "Ficus Hawai.jpg"
  },
  {
-  "id": 5,
-  "nombre": "Thom Yorke",
-  "precio": 300,
-  "descripcion": "De las cositas que mejor pude hacer en este mundo.",
-  "select": "value1",
-  "imagen": "img-thom-yorke.jpg"
- },
- {
   "id": 6,
-  "nombre": "Thom Yorke",
+  "nombre": "asdfkjasdkfaskf",
   "descripcion": "Cantante de la Banda RadioHead",
-  "categoría": "Exterior",
-  "precio": 300,
-  "imagen": "img-thom-yorke.jpg"
+  "categoría": "Interior",
+  "precio": "2222",
+  "imagen": "movie-ponyo-minimalist-ponyo-on-the-cliff-by-the-sea-studio-ghibli-hd-wallpaper-preview.jpg"
  },
  {
   "id": 7,
-  "nombre": "",
-  "descripcion": "cx",
+  "nombre": "Juan Martin",
+  "descripcion": "eeee",
   "categoría": "Exterior",
-  "precio": "",
-  "imagen": ""
+  "precio": "1111"
  },
  {
   "id": 8,
-  "nombre": "Franco cagaste el codig",
-  "descripcion": "Sos un alto cono",
-  "categoría": "Interior",
-  "precio": 1000,
-  "imagen": "img-thom-yorke.jpg"
+  "nombre": "Jusnw",
+  "descripcion": "ss",
+  "categoría": "Exterior",
+  "precio": "1111",
+  "imagen": ""
  },
  {
   "id": 9,
   "Categoría": "Exterior",
-  "nombre": "eeeee",
-  "precio": "20000",
+  "nombre": "Thom Yorke",
+  "precio": "3314",
   "categoría": "Exterior",
-  "descripcion": "eee",
-  "imagen": "Bondio.Paladini.jpg"
+  "descripcion": "De las cositas que mejor pude hacer en este mundo."
  }
 ]

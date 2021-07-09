@@ -154,7 +154,7 @@ main{
  margin-bottom: -90px;
 }
 .banner img{
-  width: 80%;
+  width: 100%;
 
 }
 
@@ -905,9 +905,9 @@ img {
   .tab-content img {
     width: 100%;
     -webkit-animation-name: opacity;
-            animation-name: opacity;img {
-  max-width: 100%; }
-
+            animation-name: opacity;img 
+  max-width: 100%; 
+    }
 .preview {
   display: -webkit-box;
   display: -webkit-flex;

@@ -8,14 +8,14 @@
     <section class="add-product">
        
 
-        <form action="/products/editProduct/<%=productoEnDetalle.id%>" method="POST"  >
+        <form action="/products/editProduct/<%=productoEnDetalle.id%>?_method=PUT" method="POST" enctype="multipart/form-data" >
           
             <div>
                 <label for="nombre">Nombre: <%=productoEnDetalle.nombre %> </label>
                 <input type="text" id="nombre" name="nombre" class="img-nueva" placeholder="Nuevo nombre">
             </div>
       
-            <label for="imagenProducto">Agregue imagenes: <%=productoEnDetalle.imagen%></label>
+            <label for="imagen">Agregue imagenes: <%=productoEnDetalle.imagen%></label>
             <br>
             <input type="file" name="imagen">
         <br>    

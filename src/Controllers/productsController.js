@@ -66,7 +66,6 @@ const productsController = {
 
     /* METODO ACTUALIZACION DE PRODUCTO */
     actualizar: function(req, res) {
-
         let valoresNuevos = req.body;
         let idProducto = req.params.id;
 
@@ -78,7 +77,7 @@ const productsController = {
                 products[i].precio = valoresNuevos.precio;
                 products[i].categoría = valoresNuevos.categoría;
                 products[i].descripcion = valoresNuevos.descripcion;
-                products[i].imagen = valoresNuevos.imagen;
+                products[i].imagen = req.file.filename;
 
                 var productoEncontrado = products[i];
 
