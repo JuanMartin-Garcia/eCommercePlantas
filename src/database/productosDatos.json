@@ -21,15 +21,14 @@
   "descripcion": "Planta de interior, Riego Bajo",
   "categoría": "Interior",
   "precio": 1150,
-  "imagen": "Ficus Hawai.jpg"
+  "imagen": "Tulipan True.jpg"
  },
  {
   "id": 4,
-  "nombre": "asdfkjasdkfaskf",
-  "descripcion": "Cantante de la Banda RadioHead",
-  "categoría": "Interior",
-  "precio": "2222",
-  "imagen": "movie-ponyo-minimalist-ponyo-on-the-cliff-by-the-sea-studio-ghibli-hd-wallpaper-preview.jpg"
+  "nombre": "Ponyo Imagen",
+  "descripcion": "Veremos si carga bien.",
+  "categoría": "Exterior",
+  "precio": "5600",
+  "imagen": "img-movie-ponyo-minimalist-ponyo-on-the-cliff-by-the-sea-studio-ghibli-hd-wallpaper-preview.jpg"
  }
- 
 ]
