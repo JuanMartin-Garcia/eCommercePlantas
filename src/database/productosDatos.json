@@ -1,6 +1,6 @@
 [
  {
-  "id": 4,
+  "id": 1,
   "nombre": "Ficus Hawai",
   "descripcion": "Planta de interior, Riego Bajo",
   "categoría": "Interior",
@@ -8,7 +8,7 @@
   "imagen": "tulipan.jpg"
  },
  {
-  "id": 4,
+  "id": 2,
   "nombre": "Ficus Hawai",
   "descripcion": "Planta de interior, Riego Bajo",
   "categoría": "Interior",
@@ -16,7 +16,7 @@
   "imagen": "plantita.jpg"
  },
  {
-  "id": 4,
+  "id": 3,
   "nombre": "Roberto Carlos",
   "descripcion": "Planta de interior, Riego Bajo",
   "categoría": "Interior",
@@ -24,34 +24,12 @@
   "imagen": "Ficus Hawai.jpg"
  },
  {
-  "id": 6,
+  "id": 4,
   "nombre": "asdfkjasdkfaskf",
   "descripcion": "Cantante de la Banda RadioHead",
   "categoría": "Interior",
   "precio": "2222",
   "imagen": "movie-ponyo-minimalist-ponyo-on-the-cliff-by-the-sea-studio-ghibli-hd-wallpaper-preview.jpg"
- },
- {
-  "id": 7,
-  "nombre": "Juan Martin",
-  "descripcion": "eeee",
-  "categoría": "Exterior",
-  "precio": "1111"
- },
- {
-  "id": 8,
-  "nombre": "Jusnw",
-  "descripcion": "ss",
-  "categoría": "Exterior",
-  "precio": "1111",
-  "imagen": ""
- },
- {
-  "id": 9,
-  "Categoría": "Exterior",
-  "nombre": "Thom Yorke",
-  "precio": "3314",
-  "categoría": "Exterior",
-  "descripcion": "De las cositas que mejor pude hacer en este mundo."
  }
+ 
 ]
