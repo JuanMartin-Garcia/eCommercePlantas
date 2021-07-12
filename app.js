@@ -25,9 +25,9 @@ app.use("/users", usersRouters);
 
 //app.use("/users", usersController);
 
-app.listen(3002, () => {
-    console.log("Servidor 3002 corriendo pefecto")   
-});
+app.listen(process.env.PORT || 3000, function() {
+    console.log("Servidor corriendo");
+})
 
 
 
