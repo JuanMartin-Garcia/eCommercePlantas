@@ -1,4 +1,3 @@
-const partialsController = require("../Controllers/partialsController");
 
 const express = require("express");
 const productsController = require("../Controllers/productsController");
