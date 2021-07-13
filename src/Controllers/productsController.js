@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { reset } = require('nodemon');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../database/productosDatos.json');
