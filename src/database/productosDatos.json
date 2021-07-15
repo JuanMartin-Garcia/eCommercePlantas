@@ -1,35 +1,35 @@
 [
  {
   "id": 1,
-  "nombre": "Ficus Hawai",
+  "nombre": "Ficus Elástica",
   "descripcion": "Planta de interior, Riego Bajo",
   "categoría": "Interior",
   "precio": 1150,
-  "imagen": "tulipan.jpg"
+  "imagen": "Ficus Elástica.jpeg"
  },
  {
   "id": 2,
-  "nombre": "Ficus Hawai",
-  "descripcion": "Planta de interior, Riego Bajo",
+  "nombre": "Orquídea",
+  "descripcion": "Planta de interior, riego Bajo",
   "categoría": "Interior",
   "precio": 1150,
-  "imagen": "plantita.jpg"
+  "imagen": "Orquídea.jpg"
  },
  {
   "id": 3,
-  "nombre": "Roberto Carlos",
-  "descripcion": "Planta de interior, Riego Bajo",
+  "nombre": "Tulipan",
+  "descripcion": "Planta de interior, riego Bajo",
   "categoría": "Interior",
   "precio": 1150,
   "imagen": "Tulipan True.jpg"
  },
  {
   "id": 4,
-  "nombre": "Ponyo Imagen",
-  "descripcion": "Veremos si carga bien.",
+  "nombre": "Rosa",
+  "descripcion": "Planta de Exterior, riego bajo.",
   "categoría": "Exterior",
   "precio": "5600",
-  "imagen": "img-movie-ponyo-minimalist-ponyo-on-the-cliff-by-the-sea-studio-ghibli-hd-wallpaper-preview.jpg"
+  "imagen": "rosa-1857455.jpg"
  },
  {
   "id": 5,
@@ -38,5 +38,13 @@
   "Categoría": "Interior",
   "precio": "6666",
   "imagen": "1626308006653.jpg"
+ },
+ {
+  "id": 6,
+  "nombre": "Aspidistra Elatior",
+  "descripcion": "Planta de Interior, riego alto",
+  "Categoría": "Interior",
+  "precio": "6666",
+  "imagen": "Aspidistra Elatior.png"
  }
 ]
