@@ -30,5 +30,13 @@
   "categoría": "Exterior",
   "precio": "5600",
   "imagen": "img-movie-ponyo-minimalist-ponyo-on-the-cliff-by-the-sea-studio-ghibli-hd-wallpaper-preview.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "Prueba Multer",
+  "descripcion": "Aca pruebo con el DateNow a ver si guarda la imagen y la levanta bien el json. ",
+  "Categoría": "Interior",
+  "precio": "6666",
+  "imagen": "1626308006653.jpg"
  }
 ]
