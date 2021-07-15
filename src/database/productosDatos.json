@@ -33,11 +33,11 @@
  },
  {
   "id": 5,
-  "nombre": "Prueba Multer",
+  "nombre": "Hortensia-azul",
   "descripcion": "Aca pruebo con el DateNow a ver si guarda la imagen y la levanta bien el json. ",
   "Categoría": "Interior",
-  "precio": "6666",
-  "imagen": "1626308006653.jpg"
+  "precio": "1150",
+  "imagen": "hortensia-azul.jpg"
  },
  {
   "id": 6,
