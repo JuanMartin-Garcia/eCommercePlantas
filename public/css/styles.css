@@ -913,8 +913,8 @@ img {
   .tab-content img {
     width: 100%;
     -webkit-animation-name: opacity;
-            animation-name: opacity;img 
-  max-width: 100%; 
+            animation-name: opacity;
+    max-width: 100%; 
     }
 .preview {
   display: -webkit-box;
@@ -1072,8 +1072,8 @@ img {
             transform: scale(1); } }
 
 /*# sourceMappingURL=style.css.map */
-    -webkit-animation-duration: .3s;
-            animation-duration: .3s; }
+    /* -webkit-animation-duration: .3s;
+            animation-duration: .3s;  */
 
 .card {
   margin-top: 50px;

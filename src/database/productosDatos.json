@@ -46,5 +46,13 @@
   "Categoría": "Interior",
   "precio": "6666",
   "imagen": "Aspidistra Elatior.png"
+ },
+ {
+  "id": 7,
+  "nombre": "Prueba Nuevo Nombre Imagen",
+  "descripcion": "Prueba",
+  "Categoría": "Exterior",
+  "precio": "95395",
+  "imagen": "SILVIA1_ME_07200.jpg1626474212260.jpg"
  }
 ]
