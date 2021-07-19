@@ -12,7 +12,7 @@
           
             <div>
                 <label for="nombre">Nombre: <%=productoEnDetalle.nombre %> </label>
-                <input type="text" id="nombre" name="nombre" class="img-nueva" placeholder="Nuevo nombre">
+                <input type="text" value=<%=productoEnDetalle.nombre %> id="nombre" name="nombre" class="img-nueva" placeholder="Nuevo nombre">
             </div>
       
             <label for="imagen">Agregue imagenes: <%=productoEnDetalle.imagen%></label>
@@ -24,19 +24,19 @@
         <div>
             <label for="precio">Precio Actual: $<%=productoEnDetalle.precio %> </label>
             <br>
-            <input type="number"  id="precio" name="precio" class="precio-nuevo" placeholder="$$$$">
+            <input type="number" value=<%=productoEnDetalle.precio %>  id="precio" name="precio" class="precio-nuevo" placeholder="$$$$">
         </div>
         
         <div>
-            <label for="descripcion">Descripcion:<%=productoEnDetalle.descripcion %> </label>
+            <label for="descripcion">Descripcion:<%=productoEnDetalle.descripcion %></label>
             <br>
-            <input type="text" name="descripcion" id="descripcion" class="desc-nuevo-product" placeholder="Aqui su nueva descripcion">
+            <input type="text" name="descripcion" id="descripcion" class="desc-nuevo-product" value=<%=productoEnDetalle.descripcion %> placeholder="Nueva descripción">
         </div>
 
         <label for="categoría">Característica:<%=productoEnDetalle.categoría %> </label>
         <br>
             <select  type="text" name="categoría" class="interior-exterior">
-                <option value="Exterior" selected>Exterior</option>
+                <option value="Exterior">Exterior</option>
                 <option value="Interior">Interior</option>
             </select>
         <button type="submit" value="Login" class="login-button">Editar Producto</button>

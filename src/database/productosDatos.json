@@ -1,11 +1,11 @@
 [
  {
   "id": 1,
-  "nombre": "Ficus Elástica",
-  "descripcion": "Planta de interior, Riego Bajo",
-  "categoría": "Interior",
-  "precio": 1150,
-  "imagen": "Ficus Elástica.jpeg"
+  "nombre": "Ficus",
+  "descripcion": "Planta",
+  "categoría": "Exterior",
+  "precio": "1155",
+  "imagen": "Ficus Elástica.jpg"
  },
  {
   "id": 2,

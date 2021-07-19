@@ -68,25 +68,24 @@ const productsController = {
         let valoresNuevos = req.body;
         let idProducto = req.params.id;
 
-
         for (let i = 0; i < products.length; i++) {
-            if (products[i].id == idProducto) {
+             if (products[i].id == idProducto) {
 
-                products[i].nombre = valoresNuevos.nombre;
-                products[i].precio = valoresNuevos.precio;
-                products[i].categoría = valoresNuevos.categoría;
-                products[i].descripcion = valoresNuevos.descripcion;
-                products[i].imagen = req.file.filename;
+                 products[i].nombre = valoresNuevos.nombre;
+                 products[i].precio = valoresNuevos.precio;
+                 products[i].categoría = valoresNuevos.categoría;
+                 products[i].descripcion = valoresNuevos.descripcion;
+                 products[i].imagen = (!req.file) ? products[i].imagen : req.file.filename;
 
-                var productoEncontrado = products[i];
+                 var productoEncontrado = products[i];
 
-                break;
-            }
-        }
+                 break;
+             };
+         };
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 
-        res.render('./products/detalle-producto', { productoEnDetalle: productoEncontrado })
+         res.render('./products/detalle-producto', { productoEnDetalle: productoEncontrado })
 
     },
     /* ELIMINAR PRODUCTO */
