@@ -17,6 +17,9 @@ router.post('/registro', uploadFile.single('avatar'), validations, usersControll
 
 router.get("/login", usersController.login);
 
+router.post("/login", usersController.loginProcess);
+
+
 router.get('/profile/:userId', usersController.profile);
 
 
