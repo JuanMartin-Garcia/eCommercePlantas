@@ -55,7 +55,7 @@ const User = {
 }
 
 //console.log(User.findByPk(2));
-console.log(User.create({nombre: 'Luccaasdaaa', email: 'lucsdaca@', }));
+
 //console.log(User.findAll());
 //console.log(User.generateId());
 //console.log(User.delete(6));

@@ -56,13 +56,43 @@
     </header>
     
     <main>
-        <form action="xxx" method="POST">
+        <form action="/users/registro" method="POST" enctype="multipart/form-data">
         <section class="form-registro">
             <h4>Registro</h4>
-            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Email">
-            <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
+            <div>
+                <input class="controls" type="text" name="fullName" value="<%= locals.oldData ? oldData.fullName : null %>" placeholder="Ingrese su nombre completo">
+                <% if (locals.errors && errors.fullName) { %>
+                    <div class="text-danger">
+                        <%= errors.fullName.msg %> 
+                    </div>
+                <% } %>
+            </div>
+           <div>
+            <input class="controls" type="email" name="email" value="<%= locals.oldData ? oldData.email : null %>" placeholder="Ingrese su Email">
+            <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= errors.email.msg %>
+                </div>
+            <% } %>
+           </div>
+           <div>
+            <input class="controls" type="password" name="password"  placeholder="Ingrese su Contraseña">
+            <% if (locals.errors && errors.password) { %>
+                <div class="text-danger">
+                    <%= errors.password.msg %>
+                </div>
+            <% } %>
+           </div>
+            <div>
+                <label for="imagen" class="form-label">Imagen</label>
+                <br>
+                <input type="file" name="imagen">
+                <% if (locals.errors && errors.imagen) { %>
+                    <div class="text-danger">
+                        <%= errors.imagen.msg %>
+                    </div>
+                <% } %>
+            </div>
             <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
             <input class="botons" type="submit" value="Registrar">
             <p><a href="../users/login">¿Ya tengo Cuenta?</a></p>
