@@ -62,13 +62,35 @@ const usersController = {
     },
 
     loginProcess: (req, res) => {
-        let userToLogin = User.findByField('email', req.body.email);
         
+        for (let i = 0; i < User.length; i++) {
 
-    },
+             if (User[i].email == req.body.email) {
+                var UserToLogin = User[i]
+
+                    if (UserToLogin) {
+                        let passwordChecked = bcryptjs.compareSync(req.body.password, UserToLogin.password);
+
+                            if(passwordChecked){
+                                
+                                return res.redirect('/users/profile', UserToLogin)
+                    }
+               }
+           
+       
+        }
+        else {
+            console.log('Las credenciales son inválidas')
+                   
+    } 
+                
+    }
+
+},
 
     profile: function (req, res){
-        return res.render('./users/')
+        
+        return res.render('./users/profile', {userProfile: req.UserToLogin})
     }
     
 }

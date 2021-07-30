@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head', {title: 'Profile' }) %>
+<body>
+    <%- include('../partials/header') %>
+	
+	<!-- Container -->
+	<div class="container" style="margin-top: 40px;">
+		<div class="row">
+			<div class="col-md-3">
+				<h2>Hi <%= userProfile.fullName %> </h2>
+				<img src="/images/avatars/<%= userProfile.avatar %> ">
+				<br>
+				<br>
+				<div class="alert alert-success"><%= userProfile.email %> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //Container -->
+	
+	<%- include('../partials/footer'); %>
+</body>
+</html>

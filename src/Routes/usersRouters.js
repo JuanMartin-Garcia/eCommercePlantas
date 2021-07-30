@@ -17,10 +17,10 @@ router.post('/registro', uploadFile.single('imagen'), validations, usersControll
 
 router.get("/login", usersController.login);
 
-router.post("/login", usersController.loginProcess);
+router.post("/login",usersController.loginProcess);
 
 
-router.get('/profile/:userId', usersController.profile);
+router.get('/profile', usersController.profile);
 
 
 module.exports = router;

@@ -27,23 +27,17 @@
   "imagen-perfil": "imagen.jpg"
  },
  {
-  "id": 19,
-  "fullName": "Garcia",
-  "email": "1233@gasdg.com",
-  "password": "$2a$10$2SwnMkouY8gwZiWH5WemxOGNKOPtdkWrIbk1HaJU/DLB5lgfs73pe",
-  "avatar": "1627412035047.jpg"
- },
- {
-  "fullName": "Juan Martin Garcia",
-  "email": "123223@gasdg.com",
-  "password": "$2a$10$fsKOITzs0FqCL6J/jOA3eO1LVImUNwtVaQwsA/oeDJoUageHOYrvq",
-  "avatar": "1627418290723.jpg"
- },
- {
-  "id": 6,
+  "id": 4,
   "fullName": "Nuevo Dsp Juan",
   "email": "qweqwe@sadfasdf.com",
   "password": "$2a$10$zXax4xzrN419Br14KSqrhOIKHz6a0bmTpPqYjL0C28XMt3CaBF4Ra",
   "avatar": "1627418457883.jpg"
+ },
+ {
+  "id": 5,
+  "fullName": "Juan Martin Garcia",
+  "email": "juan@gmail.com",
+  "password": "$2a$10$5ZUifuHdmlStDCa80I1bA.oPg7ptvalVaL875khWA8hSZBEJYZPy.",
+  "avatar": "1627598607258.jpg"
  }
 ]

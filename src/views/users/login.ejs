@@ -1,72 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    </link>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    </link>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Login</title>
-</head>
+    <%- include('../partials/head', {title: 'Login' }) %>
 
 <body>
-    <header class="home-header">
-        <div class="home-header-ofertas">
-            <a href="../users/registro"><strong>¡Registrate gratis para mas descuentos!</strong></a>
-            <div class="home-header-button-top">
-                <a href="#" class="home-button-a">
-                <i id="home-search" class="fas fa-search"></i>
-            </a>
-            <a href="../products/carrito"class="home-button-a" >
-                <i id="home-shopping" class="fas fa-shopping-bag"></i>
-            </a>
-            </div>
-        </div>
-        <div class="home-header-div1">
-            <a href="#" class="home-header-buttom">
-                <i id="home-hamburguer" class="fas fa-bars"></i>
-            </a>
-            <a href="/"> <img id="home-header-logo" src="/img/Logo/logo_transparent_mo.png">
-            </a>
-            <nav class="home-header-navbar">
-                <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="#">TIENDA</a></li>
-                    <li><a href="#">¿COMO COMPRAR?</a></li>
-                    <li><a href="#">REGALA</a></li>
-                    <li><a href="#">TIPS</a></li>
-                    <li><a href="#">FAQS</a></li>
-                    <li><a href="#">CONTACTO</a></li>
-                </ul>
-            </nav>
-            <div class="home-header-button">
-                <a href="#" class="home-button-a">
-                <i id="home-search" class="fas fa-search"></i>
-            </a>
-            <a href="../products/carrito" class="home-button-a" >
-                <i id="home-shopping" class="fas fa-shopping-bag"></i>
-            </a>
-            </div>
-        </div>
-
-        
-    </header>
+    <%- include('../partials/header') %>
     <main>
 
         <section class="login-form-login">
             
-            <form action="/levantar-registros" method="POST">
+            <form action="/users/login" method="POST">
                 <div>
-                    <label for="nombre-usuario">Usuario:</label>
-                    <input type="text" name="nombre-usuario" class="login-controls" placeholder="Ingrese su Usuario">
+                    <label for="email">Email:</label>
+                  
+                    <input type="text" name="email" class="login-controls" placeholder="Ingrese su Email">
+                   
                 </div>
                 <div>
                     <label for="password">Contraseña:</label>
-                    <input type="password" name="password" class="login-controls" data-type="password" placeholder="Ingrese su contraseña">
+                    <input type="password" name="password" class="login-controls" placeholder="Ingrese su contraseña">
                 </div>
                 <button type="submit" value="Login" class="login-button">Login</button>
                 <div class="login-olvidado-contraseña">
@@ -77,5 +28,6 @@
         </section>
 
     </main>
+    <%- include('../partials/footer') %>
 </body>
 </html>
