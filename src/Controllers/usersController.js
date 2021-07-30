@@ -62,7 +62,7 @@ const usersController = {
     },
 
     loginProcess: (req, res) => {
-        
+        let comprobar = 0
         for (let i = 0; i < User.length; i++) {
 
              if (User[i].email == req.body.email) {
@@ -73,24 +73,52 @@ const usersController = {
 
                             if(passwordChecked){
                                 
-                                return res.redirect('/users/profile', UserToLogin)
+                                console.log("asdasd",UserToLogin)
+                                req.session.usuarioLogeado = UserToLogin.id
+                                comprobar = 1
+                                
                     }
                }
-           
+               
        
         }
-        else {
-            console.log('Las credenciales son inválidas')
+       
                    
-    } 
+    }   
+            if (comprobar == 1){
+            res.redirect('/users/profile')
+    }
+  else{
+    console.log("No lo encontro") 
+  }
+       
                 
     }
 
-},
+,
 
     profile: function (req, res){
+        let comprobrante = 0
+        let UserObj = {}
+        for (let i = 0; i < User.length; i++){
+            
+            if(User[i].id == req.session.usuarioLogeado){
+            comprobante = 1
+            UserObj = User[i]
+            }
+           
+        }
         
-        return res.render('./users/profile', {userProfile: req.UserToLogin})
+        if(comprobante ==1){
+            res.render('./users/profile', {userProfile: UserObj})
+        }
+        
+        else {
+            
+            res.redirect("/users/registro")
+
+       }
+        
     }
     
 }
