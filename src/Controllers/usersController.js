@@ -73,7 +73,6 @@ const usersController = {
 
                             if(passwordChecked){
                                 
-                                console.log("asdasd",UserToLogin)
                                 req.session.usuarioLogeado = UserToLogin.id
                                 comprobar = 1
                                 
