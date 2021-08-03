@@ -8,7 +8,7 @@ const path = require('path');
 const app = express();
 const methodOverride = require('method-override');
 const session= require("express-session");
-app.use(session({secret: "esto es secreto!"}))
+app.use(session({secret: "esto es secreto!"}));
 
 
 app.set('view engine', 'ejs');

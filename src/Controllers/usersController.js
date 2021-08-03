@@ -97,8 +97,8 @@ const usersController = {
 ,
 
     profile: function (req, res){
-        let comprobrante = 0
-        let UserObj = {}
+        let comprobante = 0
+        let UserObj = null
         for (let i = 0; i < User.length; i++){
             
             if(User[i].id == req.session.usuarioLogeado){
@@ -108,8 +108,8 @@ const usersController = {
            
         }
         
-        if(comprobante ==1){
-            res.render('./users/profile', {userProfile: UserObj})
+        if(comprobante == 1){
+            res.render('users/profile', {userProfile: UserObj})
         }
         
         else {

@@ -19,7 +19,7 @@ router.post('/registro', uploadFile.single('imagen'), validations, usersControll
 
 router.get("/login", guestMiddleware, usersController.login);
 
-router.post("/login",usersController.loginProcess);
+router.post("/login", usersController.loginProcess);
 
 
 router.get('/profile', authMiddleware, usersController.profile);

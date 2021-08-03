@@ -1,6 +1,7 @@
 function guestMiddleware(req, res, next) {
-	if (req.session.usuarioLogeado) {
-		return res.redirect('/user/profile');
+	if (req.session.usuarioLogeado != undefined) {
+		
+		res.redirect('/users/profile');
 	}
 	next();
 }
