@@ -3,13 +3,19 @@ const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../database/productosDatos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+const db = require("../database/models");
 
 const productsController = {
 
 
     index: (req, res) => {
-        res.render('./partials/index', { productos: products })
+         db.productos.findAll()
+            .then(function(productos){
+               return res.send(productos)
+         })
+               
+            
+        // res.render('./partials/index', { productos: products })
     },
 
     listaProductos: (req,res)=>{
