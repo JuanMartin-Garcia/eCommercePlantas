@@ -31,14 +31,20 @@ const productsController = {
     /*  VER PRODUCTO DETALLE */
 
     detalle: function(req, res) {
-        let idProducto = req.params.id;
-        for (let i = 0; i < products.length; i++) {
-            if (products[i].id == idProducto) {
-                var productoEncontrado = products[i];
-            }
-        }
-        res.render('./products/detalle-producto', { productoEnDetalle: productoEncontrado });
+        db.productos.findByPk(req.params.id)
+            .then(function(productoEnDetalle){
+                res.render('./products/detalle-producto', { productoEnDetalle: productoEnDetalle });
+            })
+        
     },
+
+    // VIEJO METODO JSON
+        // let idProducto = req.params.id;
+        // for (let i = 0; i < products.length; i++) {
+        //     if (products[i].id == idProducto) {
+        //         var productoEncontrado = products[i];
+        //     }
+        // }
 
     /* AÑADIR PRODUCTO - MUESTRA */
 
