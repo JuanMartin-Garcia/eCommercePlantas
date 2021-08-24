@@ -75,42 +75,55 @@ const productsController = {
     /* EDICION DE PRODUCTO */
 
     editarProducto: function(req, res) {
-        let idProducto = req.params.id;
-
-        for (let i = 0; i < products.length; i++) {
-            if (products[i].id == idProducto) {
-                var productoEncontrado = products[i];
-            }
-        }
-        res.render('./products/editProduct', { productoEnDetalle: productoEncontrado });
+        db.productos.findByPk(req.params.id)
+            .then(function(productoEncontrado){
+                res.render('./products/editProduct', { productoEnDetalle: productoEncontrado });
+            })
+        
 
     },
 
     /* METODO ACTUALIZACION DE PRODUCTO */
     actualizar: function(req, res) {
-        let valoresNuevos = req.body;
-        let idProducto = req.params.id;
+        db.productos.update({
+            nombre: req.body.nombre,
+            precio: req.body.precio,
+            categoria: req.body.categoria,
+            descripcion: req.body.descripcion,
+            imagen: (!req.file) ? db.productos.imagen : req.file.filename
 
-        for (let i = 0; i < products.length; i++) {
-             if (products[i].id == idProducto) {
+        },
+        {
+            where:{
+                id:req.params.id
+            }
+        });
 
-                 products[i].nombre = valoresNuevos.nombre;
-                 products[i].precio = valoresNuevos.precio;
-                 products[i].categoría = valoresNuevos.categoría;
-                 products[i].descripcion = valoresNuevos.descripcion;
-                 products[i].imagen = (!req.file) ? products[i].imagen : req.file.filename;
-
-                 var productoEncontrado = products[i];
-
-                 break;
-             };
-         };
-
-         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-
-         res.render('./products/detalle-producto', { productoEnDetalle: productoEncontrado })
+         res.redirect("/products/detalle-producto/" + req.params.id)
 
     },
+
+    // Viejo medoto actualizar JSON
+     // let valoresNuevos = req.body;
+        // let idProducto = req.params.id;
+
+        // for (let i = 0; i < products.length; i++) {
+        //      if (products[i].id == idProducto) {
+
+        //          products[i].nombre = valoresNuevos.nombre;
+        //          products[i].precio = valoresNuevos.precio;
+        //          products[i].categoría = valoresNuevos.categoría;
+        //          products[i].descripcion = valoresNuevos.descripcion;
+        //          products[i].imagen = (!req.file) ? products[i].imagen : req.file.filename;
+
+        //          var productoEncontrado = products[i];
+
+        //          break;
+        //      };
+        //  };
+
+        //  fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+
     /* ELIMINAR PRODUCTO */
 
     eliminar: function(req, res) {
