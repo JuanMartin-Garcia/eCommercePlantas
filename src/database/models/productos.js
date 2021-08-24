@@ -36,6 +36,7 @@ function productos(sequelize, DataTypes){
     }
 
 const productos = sequelize.define(alias, cols, config);
+productos.associate = function(models){ 
 productos.belongsToMany(models.usuarios, {
     as: 'usuarios',
     through: 'compras',
@@ -43,7 +44,8 @@ productos.belongsToMany(models.usuarios, {
     otherKey: 'idUsuario',
     timestamps: true
 });
-return productos ;
+ 
 }
-
+return productos
+}
 module.exports = productos

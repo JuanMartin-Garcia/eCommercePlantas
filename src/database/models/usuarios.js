@@ -36,13 +36,16 @@ function usuarios(sequelize, DataTypes){
     }
 
 const usuarios = sequelize.define(alias, cols, config) 
-usuarios.belongsToMany(models.productos, {
-    as: 'productos',
-    through: 'compras',
-    foreignKey: 'idUsuario',
-    otherKey: 'idProducto',
-    timestamps: true
-});
+usuarios.associate = function(models) {
+    usuarios.belongsToMany(models.productos, {
+        as: 'productos',
+        through: 'compras',
+        foreignKey: 'idUsuario',
+        otherKey: 'idProducto',
+        timestamps: true
+    });
+}
+
 return usuarios
 }
 

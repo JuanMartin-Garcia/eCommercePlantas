@@ -11,15 +11,17 @@ const productsController = {
     index: (req, res) => {
          db.productos.findAll()
             .then(function(productos){
-               return res.send(productos)
+                res.render('./partials/index', { productos: productos })
          })
-               
-            
-        // res.render('./partials/index', { productos: products })
+              
     },
 
     listaProductos: (req,res)=>{
-        res.render('./products/list', { productos: products })
+        db.productos.findAll()
+            .then(function(productos){
+                res.render('./products/list', { productos: productos })
+            })
+       
     },
 
     carrito: function(req, res) {
@@ -47,13 +49,22 @@ const productsController = {
     /* AÑADIR PRODUCTO - METODO DE GUARDADO */
 
     guardar: function(req, res) {
-        let nombreImagen = req.file.filename;
-        let idNuevo = products[products.length - 1].id + 1;
-        let nuevoObjeto = Object.assign({ id: idNuevo }, req.body, { imagen: nombreImagen });
-        products.push(nuevoObjeto);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+        db.productos.create({
+            nombre: req.body.nombre,
+            precio: req.body.precio,
+            categoria: req.body.categoria,
+            descripcion: req.body.descripcion,
+            imagen: req.file.filename
+
+        })
         res.redirect('/');
     },
+    // VIEJO METODO JSON
+     // let nombreImagen = req.file.filename;
+        // let idNuevo = products[products.length - 1].id + 1;
+        // let nuevoObjeto = Object.assign({ id: idNuevo }, req.body, { imagen: nombreImagen });
+        // products.push(nuevoObjeto);
+        // fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 
     /* EDICION DE PRODUCTO */
 
