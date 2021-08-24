@@ -38,14 +38,6 @@ const productsController = {
         
     },
 
-    // VIEJO METODO JSON
-        // let idProducto = req.params.id;
-        // for (let i = 0; i < products.length; i++) {
-        //     if (products[i].id == idProducto) {
-        //         var productoEncontrado = products[i];
-        //     }
-        // }
-
     /* AÑADIR PRODUCTO - MUESTRA */
 
     añadirProducto: function(req, res) {
@@ -63,15 +55,11 @@ const productsController = {
             imagen: req.file.filename
 
         })
-        res.redirect('/');
+        .then(function(){
+            res.redirect('/');
+        })
     },
-    // VIEJO METODO JSON
-     // let nombreImagen = req.file.filename;
-        // let idNuevo = products[products.length - 1].id + 1;
-        // let nuevoObjeto = Object.assign({ id: idNuevo }, req.body, { imagen: nombreImagen });
-        // products.push(nuevoObjeto);
-        // fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-
+    
     /* EDICION DE PRODUCTO */
 
     editarProducto: function(req, res) {
@@ -97,51 +85,37 @@ const productsController = {
             where:{
                 id:req.params.id
             }
-        });
-
-         res.redirect("/products/detalle-producto/" + req.params.id)
-
+        })
+        .then(function(){
+            res.redirect("/products/detalle-producto/" + req.params.id)
+        })
     },
-
-    // Viejo medoto actualizar JSON
-     // let valoresNuevos = req.body;
-        // let idProducto = req.params.id;
-
-        // for (let i = 0; i < products.length; i++) {
-        //      if (products[i].id == idProducto) {
-
-        //          products[i].nombre = valoresNuevos.nombre;
-        //          products[i].precio = valoresNuevos.precio;
-        //          products[i].categoría = valoresNuevos.categoría;
-        //          products[i].descripcion = valoresNuevos.descripcion;
-        //          products[i].imagen = (!req.file) ? products[i].imagen : req.file.filename;
-
-        //          var productoEncontrado = products[i];
-
-        //          break;
-        //      };
-        //  };
-
-        //  fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-
-    /* ELIMINAR PRODUCTO */
+        
+     /* ELIMINAR PRODUCTO */
 
     eliminar: function(req, res) {
-        let idProducto = req.params.id;
-        for (let i = 0; i < products.length; i++) {
-            if (products[i].id == idProducto) {
-                var nombreImagen = products[i].imagen;
-                products.splice(i, 1);
-                break;
+        db.productos.destroy({
+            where:{
+                id:req.params.id
             }
-        }
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-        fs.unlinkSync(path.join(__dirname, "../../public/img/"+ nombreImagen));
-
-        res.render('./partials/index', { productos: products });
+        })
+        .then(function(){
+            res.redirect('/');
+        })
+        
     }
 
 };
+        // let idProducto = req.params.id;
+        // for (let i = 0; i < products.length; i++) {
+        //     if (products[i].id == idProducto) {
+        //         var nombreImagen = products[i].imagen;
+        //         products.splice(i, 1);
+        //         break;
+        //     }
+        // }
+
+        // fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+        // fs.unlinkSync(path.join(__dirname, "../../public/img/"+ nombreImagen));
 
 module.exports = productsController;
