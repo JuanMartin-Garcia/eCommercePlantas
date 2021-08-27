@@ -1,16 +1,9 @@
-const { validationResult } = require('express-validator'); //Calculating...
+const { validationResult } = require('express-validator'); 
 const bcryptjs = require('bcryptjs');
-const path = require('path');
-const fs = require('fs');
-const userFilePath = path.join(__dirname, '../database/usuariosDatos.json');
-const User = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-
-
+const db = require("../database/models");
 
 
 const usersController = {
-
-   
 
     registro: function (req, res){
         res.render("./users/registro")
@@ -18,44 +11,44 @@ const usersController = {
 
     processRegister: function (req, res){
         const resultValidation = validationResult(req);
-
-        if (resultValidation.isEmpty()){
-        // let userInDB = User.findByField('email', req.body.email);
-
-        // if (userInDB) {
-        //     return res.render("./users/registro", {
-        //         errors: {
-        //             email:{
-        //                 msg: 'Este email ya esta registrado'
-        //             }
-        //         },
-        //         oldData: req.body
-        //     });
-        // }
-        
-
-        let userToCreate = {
-            id: User.length + 1,
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password,10),
-            avatar: req.file.filename
-        } 
-        //escribir el json aca, pusheando el objeto userToCreat al user
-        User.push(userToCreate)
-        fs.writeFileSync(userFilePath, JSON.stringify(User, null, ' '));
-        
-        return res.redirect('/users/login')
-        }
-        else{
+        if(resultValidation.isEmpty()){
+            db.usuarios.findOne({
+                where: {
+                    email: req.body.email
+                    }
+            })
+            .then(function(usuario){
+                if(usuario){
+                    return res.render("./users/registro",{
+                        errors: {
+                            email: {
+                                msg: "Email ya existe"
+                            }
+                        },
+                        oldeData: req.body
+                    })
+                }else{
+                    db.usuarios.create({
+                        fullName: req.body.fullName,
+                        email: req.body.email,
+                        password: bcryptjs.hashSync(req.body.password,10),
+                        imagen: req.file.filename
+                    })
+                    .then(function(){
+                        res.redirect('/users/login')
+                    })
+                    .catch(function(e){
+                        console.log(e)
+                    })
+            }
+            })
+        }else{
             return res.render("users/registro", {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
         }
-        
     },
-
- 
 
     login: function (req, res){
         res.render("./users/login")
@@ -75,26 +68,19 @@ const usersController = {
                                 
                                 req.session.usuarioLogeado = UserToLogin.id
                                 comprobar = 1
-                                
                     }
                }
-               
-       
         }
-       
-                   
     }   
             if (comprobar == 1){
             res.redirect('/users/profile')
     }
-  else{
-    console.log("No lo encontro") 
-  }
+            else{
+            console.log("No lo encontro") 
+    }
        
                 
-    }
-
-,
+},
 
     profile: function (req, res){
         let comprobante = 0
