@@ -13,11 +13,16 @@
                     <label for="email">Email:</label>
                   
                     <input type="text" name="email" class="login-controls" placeholder="Ingrese su Email">
-                   
+                    <% if (locals.errors && errors.datosError) { %>
+                        <p class="text-danger"><%= errors.datosMal.msg %></p>
+                    <% } %>
                 </div>
                 <div>
                     <label for="password">Contraseña:</label>
                     <input type="password" name="password" class="login-controls" placeholder="Ingrese su contraseña">
+                    <% if (locals.errors && errors.datosError) { %>
+                        <p class="text-danger"><%= errors.datosMal.msg %></p>
+                    <% } %>
                 </div>
                 <button type="submit" value="Login" class="login-button">Login</button>
                 <div class="login-olvidado-contraseña">

@@ -17,10 +17,10 @@ function usuarios(sequelize, DataTypes){
         },
         admin:{
             type: DataTypes.INTEGER,
-            allowNull: false, 
+            allowNull: true, 
         },
         password: {
-            type: DataTypes.STRING(45),
+            type: DataTypes.STRING(150),
             allowNull: false,
         },
         imagen: {

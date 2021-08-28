@@ -53,35 +53,68 @@ const usersController = {
     login: function (req, res){
         res.render("./users/login")
     },
+  //     let comprobar = 0
+    //     for (let i = 0; i < User.length; i++) {
 
-    loginProcess: (req, res) => {
-        let comprobar = 0
-        for (let i = 0; i < User.length; i++) {
+    //          if (User[i].email == req.body.email) {
+    //             var UserToLogin = User[i]
 
-             if (User[i].email == req.body.email) {
-                var UserToLogin = User[i]
+    //                 if (UserToLogin) {
+    //                     let passwordChecked = bcryptjs.compareSync(req.body.password, UserToLogin.password);
 
-                    if (UserToLogin) {
-                        let passwordChecked = bcryptjs.compareSync(req.body.password, UserToLogin.password);
-
-                            if(passwordChecked){
+    //                         if(passwordChecked){
                                 
-                                req.session.usuarioLogeado = UserToLogin.id
-                                comprobar = 1
-                    }
-               }
-        }
-    }   
-            if (comprobar == 1){
-            res.redirect('/users/profile')
-    }
-            else{
-            console.log("No lo encontro") 
-    }
-       
-                
-},
+    //                             req.session.usuarioLogeado = UserToLogin.id
+    //                             comprobar = 1
+    //                 }
+    //            }
+    //     }
+    // }   
+    //         if (comprobar == 1){
+    //         res.redirect('/users/profile')
+    // }
+    //         else{
+    //         console.log("No lo encontro") 
+    // }
+    loginProcess: (req, res) => {
+        db.usuarios.findOne({
+            where: {
+                email: req.body.email
+            }
+        })
+        .then(function(usuario){
+                if(usuario){
+                  let usuariochequeado = bcryptjs.compareSync(req.body.password, usuario.password)
 
+                  if (usuariochequeado) {
+                    req.session.usuarioLogeado = usuario.id
+                    return res.redirect("/users/profile")
+                }
+                  else {
+                        res.render("/users/login",
+                        {
+                            errors: {
+                                datosError: {
+                                    msg: "Credenciales Incorrectas"
+                                }
+                            }
+                        })
+                }
+                }
+                else {
+                    res.render("/users/login",
+                    {
+                        errors: {
+                            datosError: {
+                                msg: "Credenciales Incorrectas"
+                            }
+                        }
+                    })
+                }
+            })
+
+    },
+    
     profile: function (req, res){
         let comprobante = 0
         let UserObj = null
