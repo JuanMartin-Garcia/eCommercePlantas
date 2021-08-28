@@ -53,29 +53,7 @@ const usersController = {
     login: function (req, res){
         res.render("./users/login")
     },
-  //     let comprobar = 0
-    //     for (let i = 0; i < User.length; i++) {
-
-    //          if (User[i].email == req.body.email) {
-    //             var UserToLogin = User[i]
-
-    //                 if (UserToLogin) {
-    //                     let passwordChecked = bcryptjs.compareSync(req.body.password, UserToLogin.password);
-
-    //                         if(passwordChecked){
-                                
-    //                             req.session.usuarioLogeado = UserToLogin.id
-    //                             comprobar = 1
-    //                 }
-    //            }
-    //     }
-    // }   
-    //         if (comprobar == 1){
-    //         res.redirect('/users/profile')
-    // }
-    //         else{
-    //         console.log("No lo encontro") 
-    // }
+    
     loginProcess: (req, res) => {
         db.usuarios.findOne({
             where: {
@@ -116,27 +94,41 @@ const usersController = {
     },
     
     profile: function (req, res){
-        let comprobante = 0
-        let UserObj = null
-        for (let i = 0; i < User.length; i++){
+        
+         db.usuarios.findByPk(req.session.usuarioLogeado)
             
-            if(User[i].id == req.session.usuarioLogeado){
-            comprobante = 1
-            UserObj = User[i]
-            }
+         .then(function(usuario){
+            if(usuario){
+                 res.render("users/profile", {userProfile: usuario})
+             }
+             else {
+                 res.redirect("/users/registro")
+             }
+         })
+               
+        
+    //     let comprobante = 0
+    //     let UserObj = null
+    //     for (let i = 0; i < User.length; i++){
+            
+    //         if(User[i].id == req.session.usuarioLogeado){
+    //         comprobante = 1
+    //         UserObj = User[i]
+    //         }
            
-        }
+    //     }
         
-        if(comprobante == 1){
-            res.render('users/profile', {userProfile: UserObj})
-        }
+    //     if(comprobante == 1){
+    //         res.render('users/profile', {userProfile: UserObj})
+    //     }
         
-        else {
+    //     else {
             
-            res.redirect("/users/registro")
+    //         res.redirect("/users/registro")
 
-       }
+    //    }
         
+    // },
     },
 
     logout: (req, res) => {
