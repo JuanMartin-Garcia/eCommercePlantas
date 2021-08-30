@@ -106,29 +106,6 @@ const usersController = {
              }
          })
                
-        
-    //     let comprobante = 0
-    //     let UserObj = null
-    //     for (let i = 0; i < User.length; i++){
-            
-    //         if(User[i].id == req.session.usuarioLogeado){
-    //         comprobante = 1
-    //         UserObj = User[i]
-    //         }
-           
-    //     }
-        
-    //     if(comprobante == 1){
-    //         res.render('users/profile', {userProfile: UserObj})
-    //     }
-        
-    //     else {
-            
-    //         res.redirect("/users/registro")
-
-    //    }
-        
-    // },
     },
 
     logout: (req, res) => {
