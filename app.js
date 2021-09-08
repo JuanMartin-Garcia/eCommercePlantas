@@ -1,6 +1,7 @@
 const partialsRouters = require("./src/Routes/partialsRouters");
 const productsRouters = require("./src/Routes/productsRouters");
 const usersRouters = require("./src/Routes/usersRouters");
+const usuarioLogeadoMiddleware = require("./src/middlewares/usuarioLogeadoMiddleware")
 
 const { Router } = require('express');
 const express = require('express');
@@ -9,7 +10,6 @@ const app = express();
 const methodOverride = require('method-override');
 const session= require("express-session");
 app.use(session({secret: "esto es secreto!"}));
-
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './src/views'));
@@ -21,9 +21,11 @@ app.use(express.static(publicPath));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(usuarioLogeadoMiddleware)
 app.use("/", partialsRouters);
 app.use("/products", productsRouters);
 app.use("/users", usersRouters);
+
 
 
 //app.use("/users", usersController);

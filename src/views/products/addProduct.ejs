@@ -15,18 +15,18 @@
                 <div>
                     <label for="nombre-de-producto">Nombre de Producto:</label>
                     <br>
-                    <input type="text" name="nombre" class="desc-nuevo-product" placeholder="Producto NUEVO">
+                    <input type="text" name="nombre" required="required" maxlength="25" class="desc-nuevo-product" placeholder="Producto NUEVO">
                 </div>
             <br>
             <div>
                 <label for="descripcion-nuevo-producto">Descripcion: </label>
                 <br>
-                <input type="text" name="descripcion" class="desc-nuevo-product" placeholder="Aqui su Descripcion">
+                <input type="text" name="descripcion" required="required" maxlength="300" class="desc-nuevo-product" placeholder="Aqui su Descripcion">
             </div>
             <br>
             <label for="interior-exterior">Característica: </label>
             <br>
-            <select name="categoria" class="interior-exterior">
+            <select name="categoria" required="required" class="interior-exterior">
                 <option value="Exterior" selected>Exterior</option>
                 <option value="Interior">Interior</option>
             </select>
@@ -35,13 +35,13 @@
             <div>
                 <label for="precio-de-producto">Precio de Producto: </label>
                 <br>
-                <input type="number" name="precio" class="precio-nuevo" placeholder="$$$$">
+                <input type="number" name="precio" max="4" required="required" class="precio-nuevo" placeholder="$$$$">
             </div>
             <br>
             <div>
                     <label for="imagen" class="form-label">Imagen</label>
                     <br>
-                    <input type="file" name="imagen">
+                    <input type="file" name="imagen" required="required">
             </div>
             <br>
             

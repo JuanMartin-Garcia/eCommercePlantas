@@ -5,10 +5,19 @@
             <a href="#" class="home-button-a">
             <i id="home-search" class="fas fa-search"></i>
         </a>
-        <a href="/carrito"class="home-button-a" >
-            <i id="home-shopping" class="fas fa-shopping-bag"></i>
+        <% if(typeof(logeado) != "undefined")  {%> 
+            <a href="/users/profile" class="home-button-a" >
+            <i id="home-shopping" class="fas fa-user"></i>
+            </a>
+            <a href="/products/carrito"class="home-button-a" >
+                <i id="home-shopping" class="fas fa-shopping-bag"></i>
+            </a>
+        <% } else { %> 
+            <a href="/users/login" class="home-button-a" >
+            <i id="home-shopping" class="fas fa-sign-in-alt"></i> 
         </a>
         </div>
+        <% } %> 
     </div>
     <div class="home-header-div1">
         <a href="#" class="home-header-buttom">
@@ -31,7 +40,10 @@
             <a href="#" class="home-button-a">
             <i id="home-search" class="fas fa-search"></i>
         </a>
-        <a href="/carrito" class="home-button-a" >
+        <a href="/products/carrito" class="home-button-a" >
+            <i id="home-shopping" class="fas fa-shopping-bag"></i>
+        </a>
+        <a href="/users/profile" class="home-button-a" >
             <i id="home-shopping" class="fas fa-shopping-bag"></i>
         </a>
         </div>
