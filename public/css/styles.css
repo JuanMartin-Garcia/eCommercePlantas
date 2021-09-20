@@ -417,6 +417,9 @@ main{
 .footer-center span {
   margin-right: 0.5rem;
 }
+.footer-center {
+  text-align: center;
+}
 
 .footer-container {
   display: grid;
