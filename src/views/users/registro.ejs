@@ -5,7 +5,7 @@
     <%- include('../partials/header') %>
     
     <main>
-        <form action="/users/registro" method="POST" enctype="multipart/form-data">
+        <form action="/users/registro" method="POST" class="agregar" enctype="multipart/form-data">
         <section class="form-registro">
             <h4>Registro</h4>
             <div>
@@ -25,7 +25,7 @@
             <% } %>
            </div>
            <div>
-            <input class="controls" type="password" name="password" max="15" required="required" placeholder="Ingrese su Contraseña">
+            <input class="controls" type="password" name="password" min="8" max="15" required="required" placeholder="Ingrese su Contraseña">
             <% if (locals.errors && errors.password) { %>
                 <div class="text-danger">
                     <%= errors.password.msg %>
@@ -35,18 +35,17 @@
             <div>
                 <label for="imagen"  class="form-label">Imagen</label>
                 <br>
-                <input type="file" name="imagen" required="required">
-                <% if (locals.errors && errors.imagen) { %>
-                    <div class="text-danger">
-                        <%= errors.imagen.msg %>
-                    </div>
-                <% } %>
+                <input type="file" id="imagenRegistro" name="imagen" required="required">
+                <div class="errores">
+                    <ul></ul>
+                </div>
             </div>
             <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
             <input class="botons" type="submit" value="Registrar">
             <p><a href="../users/login">¿Ya tengo Cuenta?</a></p>
         </section>
         </form>
+        <script src="../JS/registroValidation.js"></script>
     </main>
     <%- include('../partials/footer') %>
 </body>

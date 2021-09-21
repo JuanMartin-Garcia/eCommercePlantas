@@ -10,6 +10,30 @@ const usersController = {
     },
 
     processRegister: function (req, res){
+
+        function invalidPassword(password){
+            const isUpperCase = (s) => s.toLowerCase() != s
+            const isLowerCase = (s) => s.toUpperCase() != s
+            if(isUpperCase(password) && isLowerCase(password) ){
+                return false
+            }
+                
+        else { 
+            return true            
+              }
+
+        }
+    
+        if(invalidPassword(req.body.password)){
+            return res.render("./users/registro",{
+                errors: {
+                    password: {
+                        msg: "La password debe tener una mayúscula y una minúscula"
+                    }
+                },
+                oldData: req.body
+            })
+        }
         const resultValidation = validationResult(req);
         if(resultValidation.isEmpty()){
             db.usuarios.findOne({
@@ -25,7 +49,7 @@ const usersController = {
                                 msg: "Email ya existe"
                             }
                         },
-                        oldeData: req.body
+                        oldData: req.body
                     })
                 }else{
                     db.usuarios.create({
