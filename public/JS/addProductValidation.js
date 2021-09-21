@@ -4,8 +4,6 @@ window.addEventListener("load", function(){
   
     formulario.addEventListener("submit", function(e){
         
-       
-
         let errores = [];
 
         let nombre = document.getElementById("inputName")
@@ -28,7 +26,7 @@ window.addEventListener("load", function(){
 
         let precio = document.getElementById("precio-nuevo")
 
-        if(precio.value == " ") {
+        if(precio.value == "") {
 
             errores.push("El campo de descripcion debe estar completo")
         }   else if (precio.value.length < 3) {
@@ -38,9 +36,9 @@ window.addEventListener("load", function(){
         let imagen = document.getElementById("inputImagen")
 
         
-        if(imagen.value == " ") {
-
-            errores.push("Debes subir una imagen")
+        if((imagen.value == "") || (ExtensionIncorrecta(imagen.value)) ){
+           
+            errores.push("Debes subir una imagen con las siguientes extensiones: 'jpg', 'png', 'gif', 'jpeg' ")
         };
 
         if (errores.length > 0){
@@ -48,6 +46,7 @@ window.addEventListener("load", function(){
             e.preventDefault();
             
             let ulErrores = document.querySelector("div.errores ul")
+            cleanErroresAddProduct(ulErrores)
             for (let i = 0; i < errores.length; i++) {
                 
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
@@ -60,10 +59,21 @@ window.addEventListener("load", function(){
     });
 
 
+    function cleanErroresAddProduct(ulErrores){
+        ulErrores.innerHTML = ""
 
+    }
 
-
-
+    function ExtensionIncorrecta(s) {
+        const listaDeExtensiones = ['jpg', 'png', 'gif', 'jpeg'];
+      let extension = s.trim().split(".").pop();
+      console.log(extension)
+      for (let e of listaDeExtensiones) {
+            if (extension === e)
+            return false;
+      }
+      return true;
+    }
 
 
 
