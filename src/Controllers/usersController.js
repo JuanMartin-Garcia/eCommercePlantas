@@ -114,6 +114,10 @@ const usersController = {
                     })
                 }
             })
+            .catch(function(error){
+                console.log(error)
+   
+             })
 
     },
     
@@ -128,6 +132,10 @@ const usersController = {
              else {
                  res.redirect("/users/registro")
              }
+         })
+         .catch(function(error){
+            console.log(error)
+
          })
                
     },

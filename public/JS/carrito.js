@@ -1,15 +1,25 @@
+
 window.addEventListener("load", function(){
+    
+    let arrayProductos = [];
 
-    let addCart = document.querySelector(".addCart")
+    let addCart = document.querySelectorAll(".addCart")
 
-    addCart.addEventListener("click", function(evento){
+    for (let i = 0; i < addCart.length; i++) {
+        addCart[i].addEventListener("click", function(evento){
         
-        console.log(evento["path"])
-        console.log(evento.target.parents())
-
-    })
-
-
-
+            let producto = {
+                id: evento.target.getAttribute("data-product-id")
+            }
+     
+            arrayProductos.push(producto)
+            localStorage.setItem("carrito",arrayProductos)
+            
+            
+     
+         })
+        
+    }
+   
 
 })

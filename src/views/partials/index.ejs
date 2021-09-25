@@ -114,11 +114,12 @@
         <!--Produtct-Layout-->
          
         <div class="product-layout">
-          <% for(let i=0;i<productos.length;i++) { %> 
+          <% for(let i=0;i<productos.length;i++) { %>
+            
             <div class="product">
               <div class="img-container">
                 <img src="/img/<%=productos[i].imagen %>" class="img-product" alt="" />
-                <div id="addCart" class="addCart">
+                <div id="addCart" class="addCart" data-product-id="<%=productos[i].id%>">
                   <a href="../products/carrito" class="fas fa-shopping-cart"></a>
                 </div>
             </div>

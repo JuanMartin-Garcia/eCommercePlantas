@@ -8,7 +8,10 @@ const productsController = {
             .then(function(productos){
                 res.render('./partials/index', { productos: productos })
          })
-              
+         .catch(function(error){
+             console.log(error)
+
+          })
     },
 
     listaProductos: (req,res)=>{
@@ -16,6 +19,10 @@ const productsController = {
             .then(function(productos){
                 res.render('./products/list', { productos: productos })
             })
+            .catch(function(error){
+                console.log(error)
+   
+             })
        
     },
 
@@ -30,6 +37,10 @@ const productsController = {
             .then(function(productoEnDetalle){
                 res.render('./products/detalle-producto', { productoEnDetalle: productoEnDetalle });
             })
+            .catch(function(error){
+                console.log(error)
+   
+             })
         
     },
 
@@ -53,6 +64,10 @@ const productsController = {
         .then(function(){
             res.redirect('/');
         })
+        .catch(function(error){
+            console.log(error)
+
+         })
     },
     
     /* EDICION DE PRODUCTO */
@@ -62,6 +77,10 @@ const productsController = {
             .then(function(productoEncontrado){
                 res.render('./products/editProduct', { productoEnDetalle: productoEncontrado });
             })
+            .catch(function(error){
+                console.log(error)
+   
+             })
         
 
     },
@@ -84,6 +103,10 @@ const productsController = {
         .then(function(){
             res.redirect("/products/detalle-producto/" + req.params.id)
         })
+        .catch(function(error){
+            console.log(error)
+
+         })
     },
         
      /* ELIMINAR PRODUCTO */
@@ -97,7 +120,10 @@ const productsController = {
         .then(function(){
             res.redirect('/');
         })
-        
+        .catch(function(error){
+            console.log(error)
+
+         })
     }
 
 };
