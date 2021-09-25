@@ -3,7 +3,7 @@ module.exports = {
     "username": "root",
     "password": "root",
     "database": "plantasia",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "port": 3306,
     "dialect": "mysql"
   },
@@ -18,7 +18,7 @@ module.exports = {
     "username": "root",
     "password": "root",
     "database": "plantasia",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "port": 3306,
     "dialect": "mysql"
 }
