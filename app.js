@@ -2,6 +2,7 @@ const partialsRouters = require("./src/Routes/partialsRouters");
 const productsRouters = require("./src/Routes/productsRouters");
 const usersRouters = require("./src/Routes/usersRouters");
 const usuarioLogeadoMiddleware = require("./src/middlewares/usuarioLogeadoMiddleware")
+const apiRouters = require("./src/Routes/apiRouters");
 
 const { Router } = require('express');
 const express = require('express');
@@ -26,6 +27,7 @@ app.use("/", partialsRouters);
 app.use("/products", productsRouters);
 app.use("/users", usersRouters);
 
+app.use("/v1", apiRouters)
 
 
 //app.use("/users", usersController);

@@ -6,16 +6,23 @@ window.addEventListener("load", function(){
 
     let addCart = document.querySelectorAll(".addCart")
 
-    for (let i = 0; i < addCart.length; i++) {
-        addCart[i].addEventListener("click", function(evento){
+    // for (let i = 0; i < addCart.length; i++) {
+        addCart.addEventListener("click", function(evento){
         
             let producto = {
                 id: evento.target.getAttribute("data-product-id"),
                 
             }
      
-            arrayProductos.push(producto)
-            localStorage.setItem("carrito",arrayProductos)
+            
+            if (localStorage.getItem("carrito")!= undefined) {
+                arrayProductos = localStorage.getItem("carrito")
+                
+            } 
+                arrayProductos.push(producto)
+                localStorage.setItem("carrito",arrayProductos)
+            
+            
             // aca pasarlo a json , json stringify
             
             //get item va junto con el json.parse
@@ -23,9 +30,10 @@ window.addEventListener("load", function(){
          })
         
     }
-   
+    
+    
     // json a array : json.parse
     // array a json: json.stringify
 
     // 
-})
+)
