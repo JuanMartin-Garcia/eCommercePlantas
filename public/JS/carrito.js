@@ -1,39 +1,45 @@
 
 window.addEventListener("load", function(){
-    let a = document.getElementById("consoleA")
-    console.log(a)
-    let arrayProductos = [];
+    let nombre = document.getElementById("nombre")
+    let precio = document.getElementById("precio")
+    let imagen = document.getElementById("imagen")
+    let id = document.getElementById("productoID")
 
-    let addCart = document.querySelectorAll(".addCart")
+    let addCart = document.getElementsByClassName("addCart")
 
-    // for (let i = 0; i < addCart.length; i++) {
-        addCart.addEventListener("click", function(evento){
-        
-            let producto = {
-                id: evento.target.getAttribute("data-product-id"),
-                
-            }
-     
+        for (let i = 0; i < addCart.length; i++) {
+            let boton = addCart[i]
+             boton.addEventListener("click", agregar)
             
-            if (localStorage.getItem("carrito")!= undefined) {
-                arrayProductos = localStorage.getItem("carrito")
-                
+        }
+      
+    function agregar (){
+          let carrito = JSON.parse(localStorage.getItem("carrito"))
+          let producto = {
+           id: id.innerText,
+           nombre: nombre.innerText,
+           precio: precio.innerText,
+           imagen: imagen.innerText
+
+       }
+       if (localStorage.getItem("carrito")!= null) {
+        if (carrito[producto.id] == undefined) {
+            carrito = {
+                ...carrito,
+                [producto.id] : producto
             } 
-                arrayProductos.push(producto)
-                localStorage.setItem("carrito",arrayProductos)
-            
-            
-            // aca pasarlo a json , json stringify
-            
-            //get item va junto con el json.parse
-     
-         })
-        
-    }
-    
-    
-    // json a array : json.parse
-    // array a json: json.stringify
+        }
+              
 
-    // 
-)
+    }   else {
+        carrito = {
+            [producto.id] : producto
+        }
+
+    }
+        localStorage.setItem("carrito",JSON.stringify(producto))
+        
+      
+      }
+      
+    })

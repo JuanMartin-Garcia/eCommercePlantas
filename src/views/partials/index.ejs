@@ -118,15 +118,16 @@
             
             <div class="product">
               <div class="img-container">
-                <img src="/img/<%=productos[i].imagen %>" class="img-product" alt="" />
-                <div id="addCart" class="addCart" data-product-id="<%=productos[i].id%>">
-                  <a href="../products/carrito" class="fas fa-shopping-cart"></a>
+                <h2 id="productoID"><%=productos[i].id%></h2>
+                <img id="imagen" src="/img/<%=productos[i].imagen %>" class="img-product" alt="" />
+                <div  class="addCart"  data-product-id="<%=productos[i].id%>">
+                  <a  class="fas fa-shopping-cart"></a>
                 </div>
             </div>
               <div class="bottom">
-                <a id="consoleA" href="../products/detalle-producto/<%=productos[i].id %>"><%=productos[i].nombre %></a>
+                <a id="nombre" href="../products/detalle-producto/<%=productos[i].id %>"><%=productos[i].nombre %></a>
                 <div class="price">
-                  <span>$<%=productos[i].precio %></span>
+                  <span id="precio">$<%=productos[i].precio %></span>
                 </div>
               </div>
             </div>
