@@ -1,45 +1,40 @@
+    localStorage.clear()
+    
 
-window.addEventListener("load", function(){
-    let nombre = document.getElementById("nombre")
-    let precio = document.getElementById("precio")
-    let imagen = document.getElementById("imagen")
-    let id = document.getElementById("productoID")
-
-    let addCart = document.getElementsByClassName("addCart")
-
-        for (let i = 0; i < addCart.length; i++) {
-            let boton = addCart[i]
-             boton.addEventListener("click", agregar)
+        // for (let i = 0; i < addCart.length; i++) {
+        //     let boton = addCart[i]
+        //      boton.onclick = agregar(i+1)
             
-        }
-      
-    function agregar (){
-          let carrito = JSON.parse(localStorage.getItem("carrito"))
+        // }
+    
+    function agregar (x){
+           
           let producto = {
-           id: id.innerText,
-           nombre: nombre.innerText,
-           precio: precio.innerText,
-           imagen: imagen.innerText
+           id: x[0],
+           nombre: x[3],
+           precio: x[2],
+           imagen: x[1]
 
        }
+
+       let carrito = JSON.parse(localStorage.getItem("carrito"))
        if (localStorage.getItem("carrito")!= null) {
-        if (carrito[producto.id] == undefined) {
-            carrito = {
-                ...carrito,
-                [producto.id] : producto
-            } 
-        }
-              
+             
+            carrito = [ 
+                ...carrito, producto
+            ]
+                
+            
 
     }   else {
-        carrito = {
-            [producto.id] : producto
-        }
+        carrito = [ 
+            producto
+        ]
 
     }
-        localStorage.setItem("carrito",JSON.stringify(producto))
+        localStorage.setItem("carrito",JSON.stringify(carrito))
         
       
-      }
+    }
       
-    })
+   

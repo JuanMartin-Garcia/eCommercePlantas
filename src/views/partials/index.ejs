@@ -112,17 +112,17 @@
              <!--Produtct-Layout-Filter-->
         
         <!--Produtct-Layout-->
-         
+
         <div class="product-layout">
           <% for(let i=0;i<productos.length;i++) { %>
             
-            <div class="product">
+            <div id = "prueba" class="product">
               <div class="img-container">
                 <h2 id="productoID"><%=productos[i].id%></h2>
                 <img id="imagen" src="/img/<%=productos[i].imagen %>" class="img-product" alt="" />
-                <div  class="addCart"  data-product-id="<%=productos[i].id%>">
-                  <a  class="fas fa-shopping-cart"></a>
-                </div>
+                <div  class="addCart">
+                  <button  onclick="agregar(['<%=productos[i].id %> ', '<%=productos[i].imagen %>', '<%=productos[i].precio %>','<%=productos[i].nombre %>' ])" class="fas fa-shopping-cart"></button>
+              </div>
             </div>
               <div class="bottom">
                 <a id="nombre" href="../products/detalle-producto/<%=productos[i].id %>"><%=productos[i].nombre %></a>
@@ -135,8 +135,9 @@
             
       <!--Section Products-->
     </main>
+    <script src="/JS/carrito.js"></script>
     <%- include('../partials/footer') %>
-    <script src="../JS/carrito.js"></script>
+    
 </body>
 
 </html>

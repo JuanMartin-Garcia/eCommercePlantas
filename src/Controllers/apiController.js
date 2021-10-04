@@ -5,7 +5,7 @@ const apiController = {
     productos: (req, res) => {
         db.productos.findAll()
            .then(function(productos){
-               res.send({
+               res.json({
                    productos: productos,
                    count: productos.length,
                    countByCategory: contarCategorias(productos),
@@ -20,7 +20,7 @@ const apiController = {
    productosCategoria: (req, res) => {
        db.productos.findAll()
         .then(function(productos){
-            res.send({
+            res.json({
                 total: Object.keys(contarCategorias(productos)).length
             })
         })
@@ -30,7 +30,7 @@ const apiController = {
    
         db.productos.findByPk(req.params.id)
             .then(function(productoEnDetalle){
-                res.send (productoEnDetalle)
+                res.json (productoEnDetalle)
             })
             .catch(function(error){
                 console.log(error)
@@ -43,7 +43,7 @@ const apiController = {
         db.usuarios.findAll({attributes: { exclude: ['password', "admin"] }})
         .then(function(usuarios){ 
              
-            res.send({
+            res.json({
                 usuarios: usuarios,
                 count: usuarios.length,
             
@@ -59,7 +59,7 @@ const apiController = {
         
          db.usuarios.findByPk(req.params.id, {attributes: { exclude: ['password', "admin"] }})
                 .then(function(usuario){
-                    res.send (usuario)
+                    res.json (usuario)
                 })
                 .catch(function(error){
                     console.log(error)
