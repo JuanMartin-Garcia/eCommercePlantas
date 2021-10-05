@@ -1,4 +1,4 @@
-    localStorage.clear()
+    // localStorage.clear()
     
 
         // for (let i = 0; i < addCart.length; i++) {
@@ -6,7 +6,6 @@
         //      boton.onclick = agregar(i+1)
             
         // }
-    
     function agregar (x){
            
           let producto = {

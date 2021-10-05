@@ -22,5 +22,10 @@ carrito.forEach(producto => {
 
     document.getElementById("divCarro").appendChild(contenedor)
 
+    document.getElementById("vaciarCarrito").addEventListener("click", function() {
+       localStorage.clear()
+       location.reload()
+      });
+    // vaciar.addEventListener("onclick", )
 }); 
 

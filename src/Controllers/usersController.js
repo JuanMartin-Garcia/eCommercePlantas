@@ -83,20 +83,25 @@ const usersController = {
             where: {
                 email: req.body.email
             }
-        })
-        .then(function(usuario){
-                if(usuario){
+            
+        }).then(function(usuario){
+            
+            if(usuario){
+               
                   let usuariochequeado = bcryptjs.compareSync(req.body.password, usuario.password)
-
+                  console.log(usuariochequeado)
                   if (usuariochequeado) {
+                    
                     req.session.usuarioLogeado = usuario.id
+                    
                     return res.redirect("/users/profile")
+                    
                 }
                   else {
-                        res.render("/users/login",
+                        res.render("users/login",
                         {
                             errors: {
-                                datosError: {
+                                datosMal: {
                                     msg: "Credenciales Incorrectas"
                                 }
                             }
@@ -104,10 +109,10 @@ const usersController = {
                 }
                 }
                 else {
-                    res.render("/users/login",
+                    res.render("users/login",
                     {
                         errors: {
-                            datosError: {
+                            datosMal: {
                                 msg: "Credenciales Incorrectas"
                             }
                         }

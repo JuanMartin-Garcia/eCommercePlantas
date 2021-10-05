@@ -118,10 +118,10 @@
             
             <div id = "prueba" class="product">
               <div class="img-container">
-                <h2 id="productoID"><%=productos[i].id%></h2>
+                <!-- <h2 id="productoID"><%=productos[i].id%></h2> -->
                 <img id="imagen" src="/img/<%=productos[i].imagen %>" class="img-product" alt="" />
                 <div  class="addCart">
-                  <button  onclick="agregar(['<%=productos[i].id %> ', '<%=productos[i].imagen %>', '<%=productos[i].precio %>','<%=productos[i].nombre %>' ])" class="fas fa-shopping-cart"></button>
+                  <button class="fas fa-shopping-cart" onclick="agregar(['<%=productos[i].id %> ', '<%=productos[i].imagen %>', '<%=productos[i].precio %>','<%=productos[i].nombre %>' ])" ></button>
               </div>
             </div>
               <div class="bottom">

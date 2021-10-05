@@ -2,7 +2,7 @@ function usuarios(sequelize, DataTypes){
     const alias = "usuarios"
     const cols = {
         id:{
-            type: DataTypes.INTEGER(100).UNSIGNED, 
+            type: DataTypes.INTEGER(11).UNSIGNED, 
             primaryKey: true, 
             autoIncrement: true,
             allowNull: false,
