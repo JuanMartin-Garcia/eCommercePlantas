@@ -3,6 +3,7 @@ const productsRouters = require("./src/Routes/productsRouters");
 const usersRouters = require("./src/Routes/usersRouters");
 const usuarioLogeadoMiddleware = require("./src/middlewares/usuarioLogeadoMiddleware")
 const apiRouters = require("./src/Routes/apiRouters");
+const cors = require('cors');
 
 const { Router } = require('express');
 const express = require('express');
@@ -30,9 +31,11 @@ app.use("/users", usersRouters);
 app.use("/v1", apiRouters)
 
 
+app.use(cors())
+
 //app.use("/users", usersController);
 
-app.listen(process.env.PORT || 3000, function() {
+app.listen(process.env.PORT || 3001, function() {
     console.log("Servidor corriendo");
 })
 
