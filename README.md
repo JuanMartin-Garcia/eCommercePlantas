@@ -1,4 +1,4 @@
-# Icomer-DH-Grupo-10
+# Ecommerce-DH-Grupo-10
 //Tematica//
 Ecommerce de venta de Plantas.
 
