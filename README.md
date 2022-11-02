@@ -15,4 +15,4 @@ https://www.biotiendaplantas.com.ar -- https://potit.com.ar/ -- https://viverove
 https://trello.com/b/b9p2GkmT/ecommerce-plantas
 
 //Descripción//
-Juan M. García: Diseñador y Comunicador, una constante curiosidad me persigue.
+Juan M. García: Diseñador y Comunicador.
